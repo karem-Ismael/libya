@@ -1,0 +1,114 @@
+/*!***************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[5].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[5].use[3]!./src/app/quraan2/page.module.css ***!
+  \***************************************************************************************************************************************************************************************************************************************************************************/
+.page_container__r9iOc {
+    min-height: 100vh;
+    background-color: hsl(var(--background));
+    padding: 2rem;
+    direction: rtl;
+  }
+  
+  .page_header__ZuQLt {
+    margin-bottom: 2rem;
+  }
+  
+  .page_title__gJgZL {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 1rem;
+  }
+  
+  .page_subtitle__iJztJ {
+    color: #666;
+    max-width: 800px;
+    line-height: 1.6;
+  }
+  
+  .page_documentsGrid__Q4LRm {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1.5rem;
+    gap: 1.5rem;
+    margin: 2rem auto;
+  }
+  
+  .page_documentCard__TcgrX {
+    background-color: #b5a36a;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+  }
+  
+  .page_documentCard__TcgrX:hover {
+    transform: translateY(-4px);
+  }
+  
+  .page_documentContent__3wb87 {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    color: white;
+  }
+  
+  .page_documentTitle__B7CzY {
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-bottom: 0.75rem;
+    color: #212121;
+  }
+  
+  .page_documentDescription__P4S_b {
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+    flex-grow: 1;
+    line-height: 1.5;
+  }
+  
+  .page_documentFooter__1QxZk {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: auto;
+  }
+  
+  .page_documentDate__EJsRB {
+    font-size: 0.8rem;
+    opacity: 0.9;
+  }
+  
+  .page_downloadIcons__lg6Up {
+    display: flex;
+    gap: 0.5rem;
+  }
+  
+  .page_downloadLink__ORUpe {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    padding: 0.25rem;
+    transition: background-color 0.2s;
+  }
+  
+  .page_downloadLink__ORUpe:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 1024px) {
+    .page_documentsGrid__Q4LRm {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (max-width: 640px) {
+    .page_documentsGrid__Q4LRm {
+      grid-template-columns: 1fr;
+    }
+  }
