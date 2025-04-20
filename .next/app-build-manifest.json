@@ -10,6 +10,29 @@
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/chunks/app/page.js"
+    ],
+    "/permanent-committee/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/css/app/permanent-committee/page.css",
+      "static/chunks/app/permanent-committee/page.js"
+    ],
+    "/standards-policies/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/css/app/standards-policies/page.css",
+      "static/chunks/app/standards-policies/page.js"
+    ],
+    "/quranic-works/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/css/app/quranic-works/page.css",
+      "static/chunks/app/quranic-works/page.js"
+    ],
+    "/_not-found/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/_not-found/page.js"
     ]
   }
 }
