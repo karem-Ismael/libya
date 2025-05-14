@@ -356,7 +356,6 @@ export default function Works() {
           <BlindComponent />
         ) : activeTab == 3? (
           <ProductGrid   
-          products={products}
           />
         )
         : null
