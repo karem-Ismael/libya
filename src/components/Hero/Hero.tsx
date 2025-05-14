@@ -6,7 +6,8 @@ import SwipeableViews from "react-swipeable-views";
 import { autoPlay } from "react-swipeable-views-utils";
 import KeyboardArrowLeftIcon from "@mui/icons-material/KeyboardArrowLeft";
 import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
-
+import ArrowRightAltIcon from '@mui/icons-material/ArrowRightAlt';
+import KeyboardBackspaceIcon from '@mui/icons-material/KeyboardBackspace';
 const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 
 const carouselItems = [
@@ -47,7 +48,7 @@ export default function Hero() {
     <Box
       sx={{
         position: "relative",
-        height: "500px",
+        height: "700px",
         width: "100%",
         overflow: "hidden",
       }}
@@ -63,7 +64,7 @@ export default function Hero() {
           <div key={index}>
             <Box
               sx={{
-                height: "500px",
+                height: "700px",
                 position: "relative",
                 "&::before": {
                   content: '""',
@@ -162,7 +163,7 @@ export default function Hero() {
           }}
           onClick={handleBack}
         >
-          <KeyboardArrowLeftIcon />
+          <ArrowRightAltIcon />
         </IconButton>
         <IconButton
           sx={{
@@ -182,7 +183,7 @@ export default function Hero() {
           }}
           onClick={handleNext}
         >
-          <KeyboardArrowRightIcon />
+          <KeyboardBackspaceIcon />
         </IconButton>
       </Box>
 

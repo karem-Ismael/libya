@@ -1,6 +1,8 @@
 "use client";
 
 import React from "react";
+import styles from './page.module.css';
+
 import {
   AppBar,
   Toolbar,
@@ -23,6 +25,8 @@ import useMediaQuery from "@mui/material/useMediaQuery";
 import Link from "next/link";
 import TopBar from "../TopBar/TopBar";
 import SocialMediaIcons from "../SocialMediaIcons/SocialMediaIcons";
+import { Height } from "@mui/icons-material";
+import { usePathname } from 'next/navigation'
 
 const navItems = [
   { title: "الرئيسية", href: "/", active: true },
@@ -30,7 +34,7 @@ const navItems = [
   { title: "المعايير والسياسات", href: "/standards-policies" },
   { title: "الأعمال القرآنية", href: "/quranic-works" },
   { title: "مبيعات المصاحف", href: "/quran-sales" },
-  { title: "المركز الإعلامي", href: "/media-center" },
+  { title: "المركز الإعلامي", href: "/Media" },
   { title: "تواصل معنا", href: "/contact" },
 ];
 
@@ -38,7 +42,8 @@ export default function Header() {
   const [mobileOpen, setMobileOpen] = React.useState(false);
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("md"));
-
+  const  pathname =usePathname()
+  console.log(pathname ,"rrr")
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
   };
@@ -62,7 +67,10 @@ export default function Header() {
               display: "flex",
               justifyContent: "space-between",
               alignItems: "center",
+              height: "100%",
             }}
+            className={styles.header}
+
           >
             <Box sx={{ width: 375, height: 83, overflow: "hidden" }}>
               <Image
@@ -106,7 +114,7 @@ export default function Header() {
                   >
                     <Typography
                       sx={{
-                        color: item.active ? "primary.main" : "#545E69",
+                        color: item.href === pathname ? "primary.main" : "#545E69",
                         fontSize: 20,
                         fontFamily: "var(--font-cairo)",
                         fontWeight: 700,
@@ -126,8 +134,6 @@ export default function Header() {
                 sx={{
                   display: "flex",
                   alignItems: "center",
-                  border: "1px solid #D9D9D9",
-                  borderRadius: "4px",
                   padding: "4px 12px",
                 }}
               >
@@ -136,7 +142,7 @@ export default function Header() {
                   sx={{
                     color: "#545E69",
                     fontSize: 16,
-                    fontFamily: "var(--font-cairo)",
+                    border:"none",
                     fontWeight: 400,
                     "& input::placeholder": {
                       color: "#545E69",

@@ -3,17 +3,16 @@
   background-color: hsl(var(--background));
   padding: 2rem;
   direction: rtl;
-  max-width: 1200px;
   margin: 0 auto;
   
 }
 
 /* About Section */
 .aboutSection {
+  padding: 3rem 0;
   display: flex;
   gap: 2rem;
   margin-bottom: 4rem;
-  align-items: center;
 }
 
 .aboutContent {
@@ -21,16 +20,18 @@
 }
 
 .sectionTitle {
-  font-size: 1.8rem;
+  font-size: 48px;
   font-weight: bold;
   color: #333;
-  margin-bottom: 1.5rem;
   position: relative;
+  margin: 0px;
 }
 
 .aboutText {
-  line-height: 1.8;
-  color: #555;
+  text-align: justify;
+  font-size: 32px;
+
+  color:  #231F20;;
 }
 
 .aboutImage {
@@ -41,6 +42,7 @@
 
 .committeeImage {
   border-radius: 8px;
+  height: 100% ;
   object-fit: cover;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
@@ -65,17 +67,20 @@
   margin: 3rem 0;
 }
 
-.timeline::before {
+.timelinePoint::after {
   content: '';
   position: absolute;
-  top: 20px;
+  top: 2px;
   left: 0;
-  right: 0;
-  height: 2px;
-  background-color: #b5a36a;
+  right: 147px;
+  background-image: url("/LineIndicator.svg");
+  height: 12%;
+  width: 100%;
   z-index: 1;
 }
-
+.timelineItem:last-child .timelinePoint::after {
+  content: none;
+}
 .timelineItem {
   display: flex;
   flex-direction: column;
@@ -96,11 +101,11 @@
 .timelineYear {
   font-weight: bold;
   color: #b5a36a;
-  margin-bottom: 0.5rem;
+  font-size: 28px;
+  color: #545E69;
 }
 
 .timelineContent {
-  text-align: center;
 }
 
 .timelineContent h3 {
@@ -110,8 +115,8 @@
 }
 
 .timelineContent p {
-  font-size: 0.9rem;
-  color: #666;
+  font-size:16px;
+  color: #545E69;
 }
 
 /* Vision Mission Section */
@@ -119,27 +124,26 @@
   display: flex;
   gap: 2rem;
   margin-bottom: 4rem;
+  background: #F6F3ED;
 }
 
 .visionBox, .missionBox {
   flex: 1;
-  background-color: #f9f9f9;
   padding: 2rem;
   border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
 .boxTitle {
-  font-size: 1.5rem;
+  font-size: 40px;
   font-weight: bold;
   color: #333;
-  margin-bottom: 1rem;
-  text-align: center;
 }
 
 .boxText {
-  line-height: 1.8;
-  color: #555;
+  line-height: 56px;
+  font-size: 24px;
+  color: #231F20;
+  font-weight: 400;
 }
 
 /* Images Section */
@@ -156,7 +160,9 @@
   height: auto;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
-
+.tasksTitle{
+  font-size: 40px;
+}
 /* Responsive Adjustments */
 @media (max-width: 768px) {
   .aboutSection {
@@ -284,9 +290,17 @@
     min-width: 160px;
   }
 }
-
+.structureText{
+  font-size: 32px;
+}
+.structureTitle{
+  font-size: 40px;
+}
 .tasksList {
   padding-right: 2rem;
+  font-size: 30px;
+  line-height: 56px;
+  text-align: justify;
   padding-left: 1rem;
   padding-top: 20px;
   padding-bottom: 20px;

@@ -1,0 +1,240 @@
+.braille {
+  position: absolute;
+  top: 2.1%;
+  left: calc(50% - 280px);
+  font-size: 40px;
+}
+.groupIcon {
+  position: absolute;
+  top: 262.66px;
+  left: 542.81px;
+  width: 313.4px;
+  height: 312.1px;
+  object-fit: contain;
+  display: none;
+}
+.p {
+  margin: 0;
+  font-size: 32px;
+}
+.blankLine {
+  margin: 0;
+}
+.span1 {
+  color: #231f20;
+}
+.span {
+  font-family: 'SST Arabic';
+}
+.li {
+  margin-bottom: 0px;
+}
+.b {
+  font-family: 'SST Arabic';
+  color: #8d733a;
+}
+.span2 {
+  font-family: 'SST Arabic';
+  color: #231f20;
+}
+.span3 {
+  color: #8d733a;
+}
+.brf {
+  margin: 0;
+  padding-left: 32px;
+  color: #8d733a;
+}
+.brailleContainer {
+  position: absolute;
+  top: 728px;
+  left: calc(50% - 519px);
+  line-height: 40px;
+  display: inline-block;
+  width: 1160px;
+  font-size: 24px;
+  font-family: 'SST Arabic';
+}
+.div {
+  position: absolute;
+  top: 593px;
+  right: 884px;
+  line-height: 28px;
+  font-weight: 500;
+  opacity: 0.7;
+}
+.groupChild {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  background-color: #fff;
+  width: 48.4px;
+  height: 48.4px;
+}
+.frameIcon {
+  position: absolute;
+  top: 8.06px;
+  left: 8.07px;
+  width: 32.3px;
+  height: 32.2px;
+  overflow: hidden;
+}
+.rectangleParent {
+  width: 48.4px;
+  position: relative;
+  height: 48.4px;
+}
+.frameIcon1 {
+  position: absolute;
+  top: 9.67px;
+  left: 9.62px;
+  width: 29.1px;
+  height: 29px;
+  overflow: hidden;
+}
+.icInstgramIcon {
+  width: 48.4px;
+  position: relative;
+  height: 48.4px;
+  display: none;
+}
+.rectangleDiv {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  background-color: #fff;
+  width: 48.1px;
+  height: 48px;
+}
+.frameIcon3 {
+  position: absolute;
+  top: 8px;
+  left: 8.01px;
+  width: 32px;
+  height: 32px;
+  overflow: hidden;
+}
+.groupDiv {
+  width: 48.1px;
+  position: relative;
+  height: 48px;
+  display: none;
+}
+.frame {
+  position: absolute;
+  top: 8.06px;
+  left: 8.07px;
+  background-color: #fff;
+  width: 32.3px;
+  height: 32.2px;
+  overflow: hidden;
+}
+.vectorIcon {
+  position: absolute;
+  height: 100%;
+  width: 99.64%;
+  top: 0%;
+  right: 0.36%;
+  bottom: 0%;
+  left: 0%;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+}
+.socialIcons {
+  position: absolute;
+  top: 10px;
+  left: 9.68px;
+  width: 28px;
+  height: 28px;
+}
+.groupParent {
+  position: absolute;
+  top: calc(50% - 297px);
+  left: calc(50% - 519px);
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 18px;
+}
+.bg {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0%;
+  right: 0%;
+  bottom: 0%;
+  left: 0%;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.05);
+  border-radius: 12px;
+  background: linear-gradient(180deg, #a08957, #8d733a);
+}
+.design {
+  position: absolute;
+  top: 18.18%;
+  left: 10.78%;
+  letter-spacing: -0.5px;
+  line-height: 32px;
+}
+.pageIcon {
+  position: relative;
+  width: 29px;
+  height: 30px;
+}
+.cornerIcon {
+  position: absolute;
+  height: 37.33%;
+  width: 37.59%;
+  top: 0%;
+  right: -0.09%;
+  bottom: 62.67%;
+  left: 62.5%;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+}
+.containerIcon {
+  position: absolute;
+  height: 40.67%;
+  width: 87.59%;
+  top: 50%;
+  right: 6.16%;
+  bottom: 9.33%;
+  left: 6.25%;
+  border-radius: 1.28px;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+}
+.filetypeIcon {
+  position: absolute;
+  top: 13px;
+  left: 156px;
+  border-radius: 12px;
+  width: 29px;
+  height: 30px;
+}
+.bgParent {
+  position: absolute;
+  height: 3.12%;
+  width: 13.14%;
+  top: 32.65%;
+  right: 8.7%;
+  bottom: 64.23%;
+  left: 78.16%;
+  text-align: center;
+  color: #fff;
+  font-family: 'SST Arabic';
+}
+.brailleParent {
+  width: 100%;
+  position: relative;
+  height: 1764px;
+  overflow: hidden;
+  text-align: right;
+  font-size: 20px;
+  color: #231f20;
+  font-family: 'IBM Plex Sans Arabic';
+}
+

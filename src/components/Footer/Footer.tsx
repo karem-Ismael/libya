@@ -81,7 +81,8 @@ export default function Footer() {
                   mt: 2, 
                   mb: 1,
                   fontSize: '0.95rem',
-                  lineHeight: 1.6
+                  lineHeight: 1.6,
+                  color:"#fff"
                 }}
               >
                 مؤسسة قرآنية مرجعية، تعمل على حفظ كتاب الله سبحانه،
@@ -92,7 +93,7 @@ export default function Footer() {
               <Box sx={{ display: 'flex', justifyContent: 'flex-start', mt: 3 }}>
                 <IconButton 
                   sx={{ 
-                    color: '#333',
+                    color: '#fff',
                     '&:hover': { color: 'white' }
                   }}
                 >
@@ -100,7 +101,7 @@ export default function Footer() {
                 </IconButton>
                 <IconButton 
                   sx={{ 
-                    color: '#333',
+                    color: '#fff',
                     '&:hover': { color: 'white' }
                   }}
                 >
@@ -108,7 +109,7 @@ export default function Footer() {
                 </IconButton>
                 <IconButton 
                   sx={{ 
-                    color: '#333',
+                    color: '#fff',
                     '&:hover': { color: 'white' }
                   }}
                 >
@@ -116,7 +117,7 @@ export default function Footer() {
                 </IconButton>
                 <IconButton 
                   sx={{ 
-                    color: '#333',
+                    color: '#fff',
                     '&:hover': { color: 'white' }
                   }}
                 >
@@ -132,13 +133,13 @@ export default function Footer() {
               الصفحات الرئيسية
             </Typography>
             <Box component="ul" sx={{ listStyle: "none", p: 0, m: 0 }}>
-              {footerLinks.mainSection.map((link) => (
-                <Box component="li" key={link.href} sx={{ mb: 1 }}>
+              {footerLinks.mainSection.map((link,index) => (
+                <Box component="li" key={link?.href || index } sx={{ mb: 1 }}>
                   <Link
                     href={link.href}
                     sx={{ 
                       textDecoration: "none", 
-                      color: '#333',
+                      color: '#fff',
                       fontSize: '0.9rem',
                       "&:hover": { 
                         opacity: 0.8,
@@ -165,7 +166,7 @@ export default function Footer() {
                     href={link.href}
                     sx={{ 
                       textDecoration: "none", 
-                      color: '#333',
+                      color: '#fff',
                       fontSize: '0.9rem',
                       "&:hover": { 
                         opacity: 0.8,

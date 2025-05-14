@@ -22,25 +22,14 @@ export default function TopBar() {
           alignItems: "center",
         }}
       >
-        <Button
-          startIcon={<LanguageIcon />}
-          sx={{
-            color: "common.white",
-            textTransform: "none",
-            fontSize: 14,
-            fontFamily: "var(--font-cairo)",
-            fontWeight: 400,
-          }}
-        >
-          اللغة العربية
-        </Button>
+      
 
         <Typography
           variant="body2"
           color="common.white"
           sx={{
             fontSize: 14,
-            fontFamily: "var(--font-cairo)",
+            fontFamily: "var(--font-sst-arabic)",
             fontWeight: 400,
             direction: "rtl",
           }}
@@ -59,6 +48,18 @@ export default function TopBar() {
           }).format(new Date())}{" "}
           م
         </Typography>
+        <Button
+          startIcon={<LanguageIcon />}
+          sx={{
+            color: "common.white",
+            textTransform: "none",
+            fontSize: 14,
+            fontFamily: "var(--font-sst-arabic)",
+            fontWeight: 400,
+          }}
+        >
+          اللغة العربية
+        </Button>
       </Container>
     </Box>
   );

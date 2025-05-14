@@ -4,7 +4,25 @@
     padding: 2rem;
     direction: rtl;
   }
-  
+  .pageTitle {
+    color: #231F20;
+
+text-align: right;
+font-size: 40px;
+font-style: normal;
+font-weight: 700;
+line-height: normal
+  }
+  .pageSubTitle{
+    color: #231F20;
+
+text-align: justify !important;
+font-size: 32px !important;
+font-style: normal !important;
+font-weight: 400 !important;
+line-height: 56px !important;
+max-width: 70%;
+  }
   .header {
     margin-bottom: 2rem;
   }

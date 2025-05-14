@@ -7,7 +7,25 @@
     padding: 2rem;
     direction: rtl;
   }
-  
+  .page_pageTitle__wg3rX {
+    color: #231F20;
+
+text-align: right;
+font-size: 40px;
+font-style: normal;
+font-weight: 700;
+line-height: normal
+  }
+  .page_pageSubTitle__WDtbG{
+    color: #231F20;
+
+text-align: justify !important;
+font-size: 32px !important;
+font-style: normal !important;
+font-weight: 400 !important;
+line-height: 56px !important;
+max-width: 70%;
+  }
   .page_header__WewOf {
     margin-bottom: 2rem;
   }
@@ -112,3 +130,9 @@
       grid-template-columns: 1fr;
     }
   }
+/*!*********************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[5].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[5].use[3]!./src/components/Header/page.module.css ***!
+  \*********************************************************************************************************************************************************************************************************************************************************************************/
+.page_header__ybFjW {
+ height: 100%;
+}

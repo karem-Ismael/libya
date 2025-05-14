@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import styles from "./media.module.css";
 import {
   Box,
   Container,
@@ -48,9 +49,9 @@ export default function MediaCorner() {
   const handleTabChange = (event: React.SyntheticEvent, newValue: number) => {
     setActiveTab(newValue);
   };
-
+const [activeMediaTab,setActiveMediaTab] = useState('images');
   return (
-    <Box sx={{ py: 8, backgroundColor: "#fff" }}>
+    <Box sx={{ py: 8 }}>
       <Container maxWidth="xl">
         <Box sx={{ textAlign: "right", mb: 4 }}>
           <Typography
@@ -150,7 +151,6 @@ export default function MediaCorner() {
                         color: "#666", 
                         mb: 3,
                         height: 60,
-                        overflow: "hidden",
                         textOverflow: "ellipsis",
                         display: "-webkit-box",
                         WebkitLineClamp: 3,
@@ -161,7 +161,6 @@ export default function MediaCorner() {
                     </Typography>
                     <Box sx={{ display: "flex", justifyContent: "flex-end" }}>
                       <Button
-                        endIcon={<ArrowBackIosNewIcon sx={{ fontSize: 14 }} />}
                         sx={{ 
                           color: "#b5a36a", 
                           textTransform: "none",
@@ -173,7 +172,8 @@ export default function MediaCorner() {
                           }
                         }}
                       >
-                        اقرأ المزيد
+                 المزيد←
+                    
                       </Button>
                     </Box>
                   </CardContent>
@@ -185,20 +185,148 @@ export default function MediaCorner() {
 
         {activeTab === 1 && (
           <Box sx={{ textAlign: "center", py: 6 }}>
-            <Typography variant="h5">مكتبة الوسائط</Typography>
-            <Typography variant="body1" sx={{ mt: 2 }}>
-              محتوى مكتبة الوسائط سيظهر هنا
-            </Typography>
+<Box sx={{ width: '100%', mb: 4 }}>
+  <Box sx={{ 
+    display: 'flex', 
+    justifyContent: 'center', 
+    gap: 2, 
+    position: 'relative',
+    mb: 4 
+  }}>
+    <Button
+      variant={String(activeTab) === '1' ? 'contained' : 'outlined'}
+      onClick={() => setActiveMediaTab('images')}
+      sx={{
+        position: 'absolute',
+        top: 0,
+        left: '54%',  
+        padding: '10px 40px',
+        borderRadius: '30px',
+        zIndex:"111",
+        backgroundColor: activeMediaTab === 'images' ? '#b5a36a' : '#f6f3ee',
+        color: activeMediaTab === 'images' ? 'white' : '#b5a36a',
+        borderColor: "transparent",
+        '&:hover': {
+        }
+      }}
+    >
+      مكتبة الصور
+    </Button>
+    <Button
+      variant={activeMediaTab === 'videos' ? 'contained' : 'outlined'}
+      onClick={() => setActiveMediaTab('videos')}
+      sx={{
+        backgroundColor: activeMediaTab === 'videos' ? '#b5a36a' : '#f6f3ee',
+        color: activeMediaTab === 'videos' ? 'white' : '#b5a36a',
+        borderRadius: '30px',
+        padding: '10px 40px',
+        borderColor: "transparent",
+
+        '&:hover': {
+        }
+      }}
+    >
+      مكتبة المرئيات
+    </Button>
+  </Box>
+
+  {activeMediaTab === 'images' && (
+    <Grid container spacing={3}>
+      {[1, 2, 3, 4, 5, 6].map((item) => (
+        <Grid item xs={12} sm={6} md={4} key={item}>
+          <Card sx={{ height: '100%', boxShadow: 'none',background:"none" }}>
+            <Box sx={{ position: 'relative', height: 200 }}>
+              <Image
+                src={`/media.png`}
+                alt={`Gallery image ${item}`}
+                fill
+                style={{ objectFit: 'cover' }}
+              />
+            </Box>
+            <CardContent sx={{ textAlign: 'right' }}>
+            <Typography variant="h3" component="h3" sx={{ fontWeight: 600, mb: 2 }}>
+                صور مؤتمر الإمام نافع
+                </Typography>
+              <Typography variant="body1" sx={{  display: 'block', mb: 1,color:"#BDAC89" }}>
+                15 Jan 2023
+              </Typography>
+            
+              
+            </CardContent>
+          </Card>
+        </Grid>
+      ))}
+    </Grid>
+  )}
+
+  {activeMediaTab === 'videos' && (
+    <Grid container spacing={3}>
+      {[1, 2, 3, 4].map((item) => (
+        <Grid item xs={12} sm={6} md={4} key={item}>
+          <Card sx={{ height: '100%', boxShadow: 'none', background:"none" }}>
+            <Box sx={{ position: 'relative', height: 200 }}>
+              <Image
+                src={`/media.png`}
+                alt={`Video thumbnail ${item}`}
+                fill
+                style={{ objectFit: 'cover' }}
+              />
+              <Box
+                sx={{
+                  position: 'absolute',
+                  top: '50%',
+                  left: '50%',
+                  transform: 'translate(-50%, -50%)',
+                  width: 50,
+                  height: 50,
+                  borderRadius: '50%',
+                  backgroundColor: 'rgba(0,0,0,0.5)',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center'
+                }}
+              >
+                <Box
+                  component="span"
+                  sx={{
+                    width: 0,
+                    height: 0,
+                    borderTop: '10px solid transparent',
+                    borderBottom: '10px solid transparent',
+                    borderLeft: '15px solid white',
+                    marginLeft: '5px'
+                  }}
+                />
+              </Box>
+            </Box>
+            <CardContent sx={{ textAlign: 'right' }}>
+            <Typography variant="h3" component="h3" sx={{ fontWeight: 600, mb: 2 }}>
+                صور مؤتمر الإمام نافع
+                </Typography>
+              <Typography variant="body1" sx={{  display: 'block', mb: 1,color:"#BDAC89" }}>
+                15 Jan 2023
+              </Typography>
+            
+              
+            </CardContent>
+          </Card>
+        </Grid>
+      ))}
+    </Grid>
+  )}
+</Box>
           </Box>
         )}
 
         {activeTab === 2 && (
-          <Box sx={{ textAlign: "center", py: 6 }}>
-            <Typography variant="h5">الأسئلة الشائعة</Typography>
-            <Typography variant="body1" sx={{ mt: 2 }}>
-              محتوى الأسئلة الشائعة سيظهر هنا
-            </Typography>
-          </Box>
+         <div className={styles.login}>
+             <div className={styles.rectangleParent}>
+         <div className={styles.groupChild} />
+         <div className={styles.groupItem} />
+         </div>
+         <div className={styles.div}>ما الخطوة الأولى للبدء في إنشاء موقعي الخاص؟</div>
+      
+         </div>
         )}
       </Container>
     </Box>

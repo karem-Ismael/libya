@@ -1,24 +1,29 @@
-:root {
-  --max-width: 1440px;
-  --border-radius: 12px;
+/* Add this at the top of your globals.css file */
+@font-face {
+  font-family: 'SST Arabic';
+  src: url('/fonts/SST-Arabic-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
 }
 
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
+@font-face {
+  font-family: 'SST Arabic';
+  src: url('/fonts/SST Arabic Light.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
 }
 
-html,
+/* Then apply it to the body and all elements */
 body {
-  max-width: 100vw;
-  overflow-x: hidden;
-  direction: rtl;
+  font-family: 'SST Arabic', Arial, sans-serif;
+  margin: 0px !important;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: #ffffff;
+/* Apply to all headings */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'SST Arabic', Arial, sans-serif;
 }
 
 a {
@@ -43,4 +48,6 @@ a {
 
 ::-webkit-scrollbar-thumb:hover {
   background: #8A7545;
-} 
+}
+
+

@@ -6,17 +6,16 @@
   background-color: hsl(var(--background));
   padding: 2rem;
   direction: rtl;
-  max-width: 1200px;
   margin: 0 auto;
   
 }
 
 /* About Section */
 .page_aboutSection__imJhm {
+  padding: 3rem 0;
   display: flex;
   gap: 2rem;
   margin-bottom: 4rem;
-  align-items: center;
 }
 
 .page_aboutContent__CYzZ6 {
@@ -24,16 +23,18 @@
 }
 
 .page_sectionTitle__tCypn {
-  font-size: 1.8rem;
+  font-size: 48px;
   font-weight: bold;
   color: #333;
-  margin-bottom: 1.5rem;
   position: relative;
+  margin: 0px;
 }
 
 .page_aboutText__J7EyC {
-  line-height: 1.8;
-  color: #555;
+  text-align: justify;
+  font-size: 32px;
+
+  color:  #231F20;;
 }
 
 .page_aboutImage__Jx1md {
@@ -44,6 +45,7 @@
 
 .page_committeeImage__sSXzB {
   border-radius: 8px;
+  height: 100% ;
   object-fit: cover;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
@@ -68,17 +70,20 @@
   margin: 3rem 0;
 }
 
-.page_timeline__N5oWz::before {
+.page_timelinePoint__qiHMv::after {
   content: '';
   position: absolute;
-  top: 20px;
+  top: 2px;
   left: 0;
-  right: 0;
-  height: 2px;
-  background-color: #b5a36a;
+  right: 147px;
+  background-image: url("/LineIndicator.svg");
+  height: 12%;
+  width: 100%;
   z-index: 1;
 }
-
+.page_timelineItem__CESx2:last-child .page_timelinePoint__qiHMv::after {
+  content: none;
+}
 .page_timelineItem__CESx2 {
   display: flex;
   flex-direction: column;
@@ -99,11 +104,11 @@
 .page_timelineYear__QNCXP {
   font-weight: bold;
   color: #b5a36a;
-  margin-bottom: 0.5rem;
+  font-size: 28px;
+  color: #545E69;
 }
 
 .page_timelineContent__uzBj2 {
-  text-align: center;
 }
 
 .page_timelineContent__uzBj2 h3 {
@@ -113,8 +118,8 @@
 }
 
 .page_timelineContent__uzBj2 p {
-  font-size: 0.9rem;
-  color: #666;
+  font-size:16px;
+  color: #545E69;
 }
 
 /* Vision Mission Section */
@@ -122,27 +127,26 @@
   display: flex;
   gap: 2rem;
   margin-bottom: 4rem;
+  background: #F6F3ED;
 }
 
 .page_visionBox___owri, .page_missionBox__i9Xn6 {
   flex: 1 1;
-  background-color: #f9f9f9;
   padding: 2rem;
   border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
 .page_boxTitle__bf4p5 {
-  font-size: 1.5rem;
+  font-size: 40px;
   font-weight: bold;
   color: #333;
-  margin-bottom: 1rem;
-  text-align: center;
 }
 
 .page_boxText__IKK5p {
-  line-height: 1.8;
-  color: #555;
+  line-height: 56px;
+  font-size: 24px;
+  color: #231F20;
+  font-weight: 400;
 }
 
 /* Images Section */
@@ -159,7 +163,9 @@
   height: auto;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
-
+.page_tasksTitle__rQ9S9{
+  font-size: 40px;
+}
 /* Responsive Adjustments */
 @media (max-width: 768px) {
   .page_aboutSection__imJhm {
@@ -287,10 +293,24 @@
     min-width: 160px;
   }
 }
-
+.page_structureText__8VmtN{
+  font-size: 32px;
+}
+.page_structureTitle__kLaGF{
+  font-size: 40px;
+}
 .page_tasksList__h_2Jg {
   padding-right: 2rem;
+  font-size: 30px;
+  line-height: 56px;
+  text-align: justify;
   padding-left: 1rem;
   padding-top: 20px;
   padding-bottom: 20px;
+}
+/*!*********************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[5].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[5].use[3]!./src/components/Header/page.module.css ***!
+  \*********************************************************************************************************************************************************************************************************************************************************************************/
+.page_header__ybFjW {
+ height: 100%;
 }

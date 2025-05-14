@@ -21,13 +21,12 @@ export default function Actions() {
             flexDirection: { xs: 'column', md: 'row' },
             gap: { xs: 4, md: 6 },
             py: 6,
-            alignItems: 'center',
           }}
         >
           {/* Left side - Content */}
           <Box
             sx={{
-              width: { xs: '100%', md: '50%' },
+              width: { xs: '100%', md: '65%' },
               textAlign: 'right',
               order: { xs: 2, md: 1 },
             }}
@@ -39,6 +38,7 @@ export default function Actions() {
                 mb: 2,
                 color: '#000',
                 fontWeight: 600,
+                fontSize:"32px"
               }}
             >
               تعرّف على اللجنة الدائمة لمراجعة وإعداد المصاحف
@@ -48,7 +48,7 @@ export default function Actions() {
               sx={{
                 mb: 4,
                 color: '#666',
-                lineHeight: 1.8,
+                fontSize:"24px"
               }}
             >
               هي لجنة علمية مؤلفة من جملة من الخبراء والمختصين في مجال حفظ القرآن الكريم وقراءاته ورسمه وضبطه ومختلف علومه.
@@ -57,7 +57,6 @@ export default function Actions() {
               sx={{
                 display: 'flex',
                 justifyContent: 'flex-start',
-                mt: 3,
                 color: '#B39B65',
               }}
             >
@@ -71,7 +70,7 @@ export default function Actions() {
                   },
                 }}
               >
-                ← المزيد
+                 المزيد ←
               </Button>
             </Box>
             <Grid container spacing={2}>
@@ -81,11 +80,11 @@ export default function Actions() {
                     fullWidth
                     href={action.href}
                     sx={{
-                      height: "56px",
+                      height: "117px",
                       backgroundColor: "white",
                       color: "#000",
-                      fontSize: "1.125rem",
                       fontWeight: 400,
+                      fontSize: "32px", 
                       textAlign: "center",
                       boxShadow: "0px 2px 4px rgba(0, 0, 0, 0.1)",
                       borderRadius: "4px",
@@ -122,7 +121,7 @@ export default function Actions() {
               height={400}
               style={{
                 width: '100%',
-                height: 'auto',
+                height: '100%',
                 objectFit: 'cover',
                 borderRadius: '8px',
               }}

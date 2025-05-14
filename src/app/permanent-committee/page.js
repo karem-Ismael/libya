@@ -4,25 +4,26 @@ import Image from 'next/image';
 import styles from './page.module.css';
 import Header from '@/components/Header/Header';
 import Footer from '@/components/Footer/Footer';
+import { Container } from '@mui/material';
 
 const timelineItems = [
   {
-    year: '١٩٠٠ م',
+    year: '1900 م',
     title: 'بداية تأسيس اللجنة',
     description: 'تأسست اللجنة الأولى'
   },
   {
-    year: '١٩٥٠ م',
+    year: '1950 م',
     title: 'إعادة تشكيل اللجنة',
     description: 'تم إعادة تشكيل اللجنة'
   },
   {
-    year: '٢٠١٨ م',
+    year: '2018 م',
     title: 'تحديث نظام عمل اللجنة',
     description: 'تم تحديث نظام عمل اللجنة وآلياتها'
   },
   {
-    year: '٢٠٢٥ م',
+    year: '2025 م',
     title: 'الخطة المستقبلية',
     description: 'استكمال منظومة العمل وتطوير الآليات'
   }
@@ -32,7 +33,13 @@ export default function Quraan3() {
   return (
     <>
       <Header />
-      <main className={styles.container}>
+          <Container
+            maxWidth="xl"
+            sx={{
+              
+            }}
+            >
+
         <section className={styles.aboutSection}>
           <div className={styles.aboutContent}>
             <h2 className={styles.sectionTitle}>نبذة عن اللجنة</h2>
@@ -65,7 +72,6 @@ export default function Quraan3() {
                 <div className={styles.timelinePoint}></div>
                 <div className={styles.timelineYear}>{item.year}</div>
                 <div className={styles.timelineContent}>
-                  <h3>{item.title}</h3>
                   <p>{item.description}</p>
                 </div>
               </div>
@@ -159,7 +165,8 @@ export default function Quraan3() {
             </button>
           </div>
         </section>
-      </main>
+      </Container>
+
       <Footer />
     </>
   );

@@ -5,7 +5,22 @@ import Image from 'next/image';
 import styles from './page.module.css';
 import Header from '@/components/Header/Header';
 import Footer from '@/components/Footer/Footer';
-
+import {
+  AppBar,
+  Toolbar,
+  Typography,
+  Button,
+  Container,
+  Box,
+  IconButton,
+  Drawer,
+  List,
+  ListItem,
+  ListItemText,
+  Grid ,
+  Paper ,
+  InputBase,
+} from "@mui/material";
 const documents = [
   {
     id: 1,
@@ -67,48 +82,87 @@ export default function Quraan2() {
   return (
     <>
       <Header />
-      <main className={styles.container}>
-        <div className={styles.header}>
-          <h1 className={styles.title}>المعايير والسياسات واللوائح القرآنية</h1>
-          <p className={styles.subtitle}>
+      <Container maxWidth="xl">
+        <Box sx={{ my: 4 }}>
+          <Typography variant="h3" component="h1" align="right" gutterBottom className={styles.pageTitle}>
+            المعايير والسياسات واللوائح القرآنية
+          </Typography>
+          <Typography variant="subtitle1" align="right" gutterBottom className={styles.pageSubTitle}>
             تمثل السياسات والإجراءات جزءاً أساسياً في إدارة أي منظمة وهناك
             خطوات محددة يمكن اتباعها لضمان فعالية هذه السياسات.
-          </p>
-        </div>
-
-        <div className={styles.documentsGrid}>
+          </Typography>
+        </Box>
+        <Box sx={{ 
+          display: 'flex',
+          flexWrap: 'wrap',
+          gap: 3,
+          marginY:"10px"
+        }}>
           {documents.map((doc) => (
-            <div key={doc.id} className={styles.documentCard}>
-              <div className={styles.documentContent}>
-                <h3 className={styles.documentTitle}>{doc.title}</h3>
-                <p className={styles.documentDescription}>{doc.description}</p>
-                <div className={styles.documentFooter}>
-                    <div style={{display:"flex",alignItems:"center"}}>
-                    <Image 
-                        src="/Schedule.png" 
-                        alt="date" 
-                        width={20} 
-                        height={20} 
-                      />
-                  <span className={styles.documentDate}>{doc.date}</span>
+            <Box 
+              key={doc.id}
+              sx={{
+                flexBasis: {
+                  xs: '100%',
+                  sm: 'calc(50% - 12px)',
+                  md: 'calc(33.333% - 60px)'
+                },
+                height: '100%',
+                display: 'flex',
+                flexDirection: 'column',
+                borderRadius: "24px",
+                border: "0.5px solid #B8BCCD",
+                background: "#A08957;",
+                padding: "34px 20px"
+              }}
+            >
+              <Typography variant="h6" component="h3" gutterBottom 
+              sx={{
+                fontSize: "20px",
+              }}
+              >
+                {doc.title}
+              </Typography>
+              <Typography variant="body2" sx={{ flexGrow: 1,
+                fontSize: "18px",
+                lineHeight: "30px",
+                color:"#fff"
+                
 
-                    </div>
-                  <div className={styles.downloadIcons}>
-                    <a href="#" className={styles.downloadLink}>
-                      <Image 
-                        src="/pdficon.png" 
-                        alt="PDF" 
-                        width={20} 
-                        height={20} 
-                      />
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
+                
+               }} >
+                {doc.description}
+              </Typography>
+              <Box sx={{ 
+                display: 'flex', 
+                justifyContent: 'space-between',
+                alignItems: 'center',
+                mt: 2 
+              }}>
+                <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
+                  <Image 
+                    src="/Schedule.png" 
+                    alt="date" 
+                    width={20} 
+                    height={20} 
+                  />
+                  <Typography variant="caption">
+                    {doc.date}
+                  </Typography>
+                </Box>
+                <IconButton component="a" href="#" size="small">
+                  <Image 
+                    src="/pdficon.png" 
+                    alt="PDF" 
+                    width={30} 
+                    height={30} 
+                  />
+                </IconButton>
+              </Box>
+            </Box>
           ))}
-        </div>
-      </main>
+        </Box>
+      </Container>
       <Footer />
     </>
   );

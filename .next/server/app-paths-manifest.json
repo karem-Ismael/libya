@@ -1,7 +1,9 @@
 {
   "/_not-found/page": "app/_not-found/page.js",
-  "/page": "app/page.js",
+  "/quranic-works/page": "app/quranic-works/page.js",
+  "/contact/page": "app/contact/page.js",
   "/permanent-committee/page": "app/permanent-committee/page.js",
   "/standards-policies/page": "app/standards-policies/page.js",
-  "/quranic-works/page": "app/quranic-works/page.js"
+  "/page": "app/page.js",
+  "/downloads/page": "app/downloads/page.js"
 }

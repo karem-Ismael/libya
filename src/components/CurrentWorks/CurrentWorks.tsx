@@ -4,6 +4,9 @@ import React, { useState } from "react";
 import { Box, Container, Typography, Grid, Paper, Tabs, Tab } from "@mui/material";
 import Image from "next/image";
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
+import ProductGrid from "../firstTab";
+import { QuranGrid1 } from "@/app/quranic-works/lagnaproductis";
+import Reasearches from "../Researches";
 
 const projects = [
   {
@@ -69,11 +72,12 @@ export default function CurrentWorks() {
               '& .MuiTab-root': {
                 color: '#777',
                 fontWeight: 500,
-                fontSize: '0.9rem',
+                fontSize: '20px',
                 mx: 1,
                 py: 1,
                 px: 2,
                 borderRadius: '4px',
+                background:"#F6F3EE",
                 '&.Mui-selected': {
                   color: '#fff',
                   backgroundColor: '#b5a36a',
@@ -174,6 +178,21 @@ export default function CurrentWorks() {
            
           </Box>
         )}
+        {
+          activeTab ==0 &&(
+            <ProductGrid  />
+          )
+        }
+        {
+          activeTab ==1 &&(
+            <QuranGrid1  />
+          )
+        }
+        {
+          activeTab ==3 &&(
+            <Reasearches  />
+          )
+        }
       </Box>
     </Container>
   );

@@ -1,0 +1,111 @@
+.mainContainer {
+  background-color: #b5a36a;
+  padding: 4rem 0;
+  position: relative;
+  overflow: hidden;
+  border-radius: 16px;
+  margin: 2rem 0;
+}
+
+.textContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: right;
+  color: #fff;
+}
+
+.appInfo {
+  max-width: 600px;
+  margin-left: auto;
+}
+
+.logoContainer {
+  display: inline-block;
+  background-color: #fff;
+  border-radius: 16px;
+  padding: 8px;
+  margin-bottom: 1.5rem;
+}
+
+.appLogo {
+  border-radius: 12px;
+}
+
+.appTitle {
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: #fff;
+}
+
+.appSubtitle {
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.appDescription {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 2rem;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.downloadButtons {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.downloadButton {
+  background-color: #000 !important;
+  color: #fff !important;
+  border-radius: 8px !important;
+  padding: 0.5rem 1.5rem !important;
+  text-transform: none !important;
+  font-weight: 500 !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 0.5rem !important;
+}
+
+.downloadButton:hover {
+  background-color: #333 !important;
+}
+
+.imageContent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.phonesContainer {
+  position: relative;
+  width: 100%;
+  height: 500px;
+}
+
+.phoneImage {
+  object-fit: contain;
+}
+
+@media (max-width: 900px) {
+  .mainContainer {
+    padding: 3rem 1rem;
+  }
+  
+  .appInfo {
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  .downloadButtons {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .phonesContainer {
+    height: 400px;
+    margin-top: 2rem;
+  }
+}

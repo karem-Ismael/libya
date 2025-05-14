@@ -4,7 +4,7 @@
 .page_container__VdLsy {
     min-height: 100vh;
     background-color: hsl(var(--background));
-    padding: 2rem;
+    padding: 2rem 0px;
     direction: rtl;
   }
   
@@ -13,9 +13,9 @@
   }
   
   .page_title__rqR6O {
-    font-size: 2rem;
+    font-size: 40px;
     font-weight: bold;
-    color: #8B7355;
+    color: #231F20;
     margin-bottom: 1rem;
   }
   
@@ -26,13 +26,14 @@
   }
   
   .page_tab__gvMYQ {
-    padding: 0.5rem 1rem;
-    background-color: #F5F5F5;
-    border-radius: 0.25rem;
-    color: #666;
+    padding: 0.80rem 1rem;
+    background-color: #F6F3EE;
+    border-radius: 10px;
+    color: #000;
     cursor: pointer;
     border: none;
     transition: all 0.2s;
+    font-size: 20px;
   }
   
   .page_tab__gvMYQ:hover {
@@ -66,13 +67,12 @@
   
   .page_imageContainer__ZxLOz {
     position: relative;
-    aspect-ratio: 1;
     overflow: hidden;
   }
   
   .page_image__esySs {
-    width: 100%;
-    height: 100%;
+   max-width: 610px;
+   max-height: 310px;
   }
   
   .page_content__5_IIw {
@@ -214,8 +214,8 @@
   }
   
   .page_quranImage__w1xhl {
-    object-fit: contain;
-    max-height: 250px;
+    width: 100%;
+    height: auto;
   }
   
   .page_quranName__TdI2H {
@@ -225,7 +225,10 @@
     font-size: 1.2rem;
     border-bottom: 1px solid #e0e0e0;
   }
-  
+  .page_image1__WavEu{
+    max-width: 619px;
+    max-height: 310px;
+  }
   .page_specTable__sNONj {
     display: flex;
     flex-direction: column;
@@ -262,5 +265,715 @@
   }
   
   .page_reviewButton__ip8gN:hover {
+    background-color: #a3915c;
+  }
+/*!*********************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[5].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[5].use[3]!./src/components/Header/page.module.css ***!
+  \*********************************************************************************************************************************************************************************************************************************************************************************/
+.page_header__ybFjW {
+ height: 100%;
+}
+/*!*********************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[5].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[5].use[3]!./src/components/Works/works.module.css ***!
+  \*********************************************************************************************************************************************************************************************************************************************************************************/
+.works_container__pHS8o {
+  padding: 2rem 0;
+}
+
+.works_tabsContainer__ZZBEC {
+  margin-bottom: 2rem;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.works_tabs__mEEGg {
+  min-height: 48px;
+}
+
+.works_tab__MrwWg {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #666;
+  text-transform: none;
+  min-width: auto;
+  padding: 0.5rem 1rem;
+  margin-right: 1rem;
+}
+
+.works_activeTab__CvXBk {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #fff;
+  background-color: #b5a36a;
+  border-radius: 4px;
+  text-transform: none;
+  min-width: auto;
+  padding: 0.5rem 1rem;
+  margin-right: 1rem;
+}
+
+.works_searchContainer__udyt4 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.works_searchBox__rGcQu {
+  flex: 1 1;
+  max-width: 500px;
+}
+
+.works_searchInput__ZViSA {
+  background-color: #f5f5f5;
+  border-radius: 8px;
+}
+
+.works_filterBox__cLpno {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.works_dateFilter__z7orz {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #666;
+}
+
+.works_calendarIcon___668t {
+  font-size: 1.2rem;
+  color: #b5a36a;
+}
+
+.works_dateSelector__WSPvM {
+  display: flex;
+  align-items: center;
+  width: 200px;
+  height: 4px;
+  background-color: #e0e0e0;
+  border-radius: 2px;
+  position: relative;
+}
+
+.works_dateCircle__EHwHn {
+  width: 16px;
+  height: 16px;
+  background-color: #b5a36a;
+  border-radius: 50%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+}
+
+.works_gridContainer__mDa2M {
+  margin-bottom: 2rem;
+}
+
+.works_itemCard__huyfB {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.works_cardHeader__Df9fw {
+  padding: 1rem;
+  background-color: #f9f9f9;
+  border-bottom: 1px solid #e0e0e0;
+  text-align: right;
+}
+
+.works_cardTitle__CcjIZ {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 0.25rem;
+}
+
+.works_cardSubtitle__k4qKd {
+  font-size: 0.8rem;
+  color: #666;
+}
+
+.works_cardContent__pDwDe {
+  padding: 1rem;
+  flex-grow: 1;
+  text-align: right;
+}
+
+.works_cardDescription__hq3uf {
+  font-size: 0.9rem;
+  color: #333;
+}
+
+.works_cardActions__281Xw {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem;
+  gap: 0.5rem;
+}
+
+.works_downloadBtn__x38FB, .works_previewBtn__8lokt, .works_detailsBtn__omPbm {
+  font-size: 0.75rem;
+  text-transform: none;
+  border-color: #b5a36a;
+  color: #b5a36a;
+  border-radius: 20px;
+  padding: 0.25rem 0.75rem;
+}
+
+.works_downloadBtn__x38FB:hover, .works_previewBtn__8lokt:hover, .works_detailsBtn__omPbm:hover {
+  background-color: rgba(181, 163, 106, 0.1);
+}
+
+.works_paginationContainer__mejoZ {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.works_pagination__BM9H1 {
+  & .works_MuiPaginationItem-root___bGM1 {
+    color: #666;
+  }
+  
+  & .works_Mui-selected__odGM4 {
+    background-color: #b5a36a;
+    color: #fff;
+  }
+}
+
+@media (max-width: 768px) {
+  .works_searchContainer__udyt4 {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: flex-start;
+  }
+  
+  .works_searchBox__rGcQu {
+    width: 100%;
+    max-width: none;
+  }
+  
+  .works_cardActions__281Xw {
+    flex-direction: column;
+  }
+}
+/*!*********************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[5].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[5].use[3]!./src/components/blind/blind.module.css ***!
+  \*********************************************************************************************************************************************************************************************************************************************************************************/
+.blind_braille__8ivVT {
+  position: absolute;
+  top: 2.1%;
+  left: calc(50% - 280px);
+  font-size: 40px;
+}
+.blind_groupIcon__HKWoM {
+  position: absolute;
+  top: 262.66px;
+  left: 542.81px;
+  width: 313.4px;
+  height: 312.1px;
+  object-fit: contain;
+  display: none;
+}
+.blind_p__TZdTF {
+  margin: 0;
+  font-size: 32px;
+}
+.blind_blankLine__Ahs7H {
+  margin: 0;
+}
+.blind_span1__hwy8D {
+  color: #231f20;
+}
+.blind_span__Bj4E4 {
+  font-family: 'SST Arabic';
+}
+.blind_li__sZwhA {
+  margin-bottom: 0px;
+}
+.blind_b__W_6k0 {
+  font-family: 'SST Arabic';
+  color: #8d733a;
+}
+.blind_span2__xdbXi {
+  font-family: 'SST Arabic';
+  color: #231f20;
+}
+.blind_span3__80CLG {
+  color: #8d733a;
+}
+.blind_brf__1HVUi {
+  margin: 0;
+  padding-left: 32px;
+  color: #8d733a;
+}
+.blind_brailleContainer__KSp1v {
+  position: absolute;
+  top: 728px;
+  left: calc(50% - 519px);
+  line-height: 40px;
+  display: inline-block;
+  width: 1160px;
+  font-size: 24px;
+  font-family: 'SST Arabic';
+}
+.blind_div__slKMR {
+  position: absolute;
+  top: 593px;
+  right: 884px;
+  line-height: 28px;
+  font-weight: 500;
+  opacity: 0.7;
+}
+.blind_groupChild__qkpE5 {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  background-color: #fff;
+  width: 48.4px;
+  height: 48.4px;
+}
+.blind_frameIcon__XVgYa {
+  position: absolute;
+  top: 8.06px;
+  left: 8.07px;
+  width: 32.3px;
+  height: 32.2px;
+  overflow: hidden;
+}
+.blind_rectangleParent__XNWcv {
+  width: 48.4px;
+  position: relative;
+  height: 48.4px;
+}
+.blind_frameIcon1__CEUrD {
+  position: absolute;
+  top: 9.67px;
+  left: 9.62px;
+  width: 29.1px;
+  height: 29px;
+  overflow: hidden;
+}
+.blind_icInstgramIcon__88aJN {
+  width: 48.4px;
+  position: relative;
+  height: 48.4px;
+  display: none;
+}
+.blind_rectangleDiv__204Hs {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  background-color: #fff;
+  width: 48.1px;
+  height: 48px;
+}
+.blind_frameIcon3__fRyOL {
+  position: absolute;
+  top: 8px;
+  left: 8.01px;
+  width: 32px;
+  height: 32px;
+  overflow: hidden;
+}
+.blind_groupDiv__Fr3dZ {
+  width: 48.1px;
+  position: relative;
+  height: 48px;
+  display: none;
+}
+.blind_frame__fa5sR {
+  position: absolute;
+  top: 8.06px;
+  left: 8.07px;
+  background-color: #fff;
+  width: 32.3px;
+  height: 32.2px;
+  overflow: hidden;
+}
+.blind_vectorIcon__95e3b {
+  position: absolute;
+  height: 100%;
+  width: 99.64%;
+  top: 0%;
+  right: 0.36%;
+  bottom: 0%;
+  left: 0%;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+}
+.blind_socialIcons__FtMxZ {
+  position: absolute;
+  top: 10px;
+  left: 9.68px;
+  width: 28px;
+  height: 28px;
+}
+.blind_groupParent__WC9Uh {
+  position: absolute;
+  top: calc(50% - 297px);
+  left: calc(50% - 519px);
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 18px;
+}
+.blind_bg__Jij9g {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0%;
+  right: 0%;
+  bottom: 0%;
+  left: 0%;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.05);
+  border-radius: 12px;
+  background: linear-gradient(180deg, #a08957, #8d733a);
+}
+.blind_design__Iu19Q {
+  position: absolute;
+  top: 18.18%;
+  left: 10.78%;
+  letter-spacing: -0.5px;
+  line-height: 32px;
+}
+.blind_pageIcon__k_tvj {
+  position: relative;
+  width: 29px;
+  height: 30px;
+}
+.blind_cornerIcon__N8NxI {
+  position: absolute;
+  height: 37.33%;
+  width: 37.59%;
+  top: 0%;
+  right: -0.09%;
+  bottom: 62.67%;
+  left: 62.5%;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+}
+.blind_containerIcon__lMt24 {
+  position: absolute;
+  height: 40.67%;
+  width: 87.59%;
+  top: 50%;
+  right: 6.16%;
+  bottom: 9.33%;
+  left: 6.25%;
+  border-radius: 1.28px;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+}
+.blind_filetypeIcon__Io6x7 {
+  position: absolute;
+  top: 13px;
+  left: 156px;
+  border-radius: 12px;
+  width: 29px;
+  height: 30px;
+}
+.blind_bgParent__5RxVN {
+  position: absolute;
+  height: 3.12%;
+  width: 13.14%;
+  top: 32.65%;
+  right: 8.7%;
+  bottom: 64.23%;
+  left: 78.16%;
+  text-align: center;
+  color: #fff;
+  font-family: 'SST Arabic';
+}
+.blind_brailleParent__IZ__Q {
+  width: 100%;
+  position: relative;
+  height: 1764px;
+  overflow: hidden;
+  text-align: right;
+  font-size: 20px;
+  color: #231f20;
+  font-family: 'IBM Plex Sans Arabic';
+}
+
+
+/*!***********************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[5].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[5].use[3]!./src/components/firstTab/page.module.css ***!
+  \***********************************************************************************************************************************************************************************************************************************************************************************/
+.page_container__oYTXx {
+    min-height: 100vh;
+    background-color: hsl(var(--background));
+    padding: 2rem 0px;
+    direction: rtl;
+  }
+  
+  .page_header__TtptJ {
+    margin-bottom: 2rem;
+  }
+  
+  .page_title__l3Exe {
+    font-size: 40px;
+    font-weight: bold;
+    color: #231F20;
+    margin-bottom: 1rem;
+  }
+  
+  .page_tabs__Ld6xc {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+  }
+  
+  .page_tab__fCFUj {
+    padding: 0.80rem 1rem;
+    background-color: #F6F3EE;
+    border-radius: 10px;
+    color: #000;
+    cursor: pointer;
+    border: none;
+    transition: all 0.2s;
+    font-size: 20px;
+  }
+  
+  .page_tab__fCFUj:hover {
+    background-color: #E8E8E8;
+  }
+  
+  .page_tabActive__q_nee {
+    background-color: #8B7355;
+    color: white;
+  }
+  
+  .page_grid__OAEtt {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 2rem;
+    gap: 2rem;
+    margin: 0 auto;
+  }
+  
+  .page_card__fqmO8 {
+    background: white;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+  }
+  
+  .page_card__fqmO8:hover {
+    transform: translateY(-4px);
+  }
+  
+  .page_imageContainer__qQV67 {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .page_image__Hu6Sb {
+   max-width: 610px;
+   max-height: 310px;
+  }
+  
+  .page_content__nTzK4 {
+    padding: 1rem;
+  }
+  
+  .page_productTitle__X5H78 {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 0.5rem;
+  }
+  
+  .page_specs__afDU_ {
+    font-size: 0.875rem;
+    color: #666;
+    margin-bottom: 1rem;
+  }
+  
+  .page_button___Roil {
+    padding: 0.5rem 1rem;
+    background-color: #8B7355;
+    color: white;
+    border-radius: 0.25rem;
+    transition: opacity 0.2s;
+  }
+  
+  .page_button___Roil:hover {
+    opacity: 0.9;
+  }
+  
+  .page_downloadButton__75OH7 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    background-color: #b5a36a;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 10px;
+    direction: rtl;
+  }
+  
+  .page_downloadButton__75OH7:hover {
+    background-color: #a3915c;
+  }
+  
+  .page_tabContent__7PHKR {
+    margin-top: 2rem;
+    direction: rtl;
+  }
+  
+  .page_tabTitle__n9pTq {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #333;
+  }
+  
+  .page_tabDescription__oto_k {
+    margin-bottom: 2rem;
+  }
+  
+  .page_emptyState__P2I6f {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    margin-top: 2rem;
+  }
+  
+  .page_techGrid__K3Gma {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 2rem;
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+  
+  .page_techCard__xEbr4 {
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .page_techCard__xEbr4 h3 {
+    margin-bottom: 0.5rem;
+    color: #333;
+  }
+  
+  .page_articlesList__QI8dR {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-top: 2rem;
+  }
+  
+  .page_articleItem__URRIS {
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .page_articleItem__URRIS h3 {
+    margin-bottom: 0.5rem;
+    color: #333;
+  }
+  
+  .page_quranGrid__U36rO {
+    display: grid;
+    grid-template-columns: 1fr 1fr ;
+    grid-gap: 2rem;
+    gap: 2rem;
+    margin-top: 2rem;
+    direction: rtl;
+  }
+  
+  .page_quranItem__DBtpV {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  
+  .page_quranImageContainer__gU2MT {
+    display: flex;
+    justify-content: center;
+    background-color: #f5f5f5;
+    padding: 1rem;
+  }
+  
+  .page_quranImage__YW6ok {
+    width: 100%;
+    height: auto;
+  }
+  
+  .page_quranName__JAraA {
+    text-align: center;
+    padding: 1rem;
+    margin: 0;
+    font-size: 1.2rem;
+    border-bottom: 1px solid #e0e0e0;
+  }
+  .page_image1___idRJ{
+    max-width: 619px;
+    max-height: 310px;
+  }
+  .page_specTable__iyIMb {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .page_specRow__EOacr {
+    display: flex;
+    border-bottom: 1px solid #e0e0e0;
+  }
+  
+  .page_specLabel__GObCk {
+    flex: 1 1;
+    padding: 0.75rem;
+    background-color: #f9f9f9;
+    font-weight: bold;
+    border-left: 1px solid #e0e0e0;
+  }
+  
+  .page_specValue__9yS5z {
+    flex: 1 1;
+    padding: 0.75rem;
+  }
+  
+  .page_reviewButton__pQuGT {
+    background-color: #b5a36a;
+    color: white;
+    border: none;
+    padding: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: auto;
+    text-align: center;
+  }
+  
+  .page_reviewButton__pQuGT:hover {
     background-color: #a3915c;
   }
