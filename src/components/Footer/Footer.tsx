@@ -34,12 +34,11 @@ const XIcon = () => (
 
 const footerLinks = {
   mainSection: [
-    { title: "الصفحات الرئيسية", href: "#" },
-    { title: "ترتيب المصحف", href: "#" },
+    { title: "تعرف علي اللجنة  ", href: "#" },
     { title: "القرآن الكريم", href: "#" },
-    { title: "المخطوطات الكريمية", href: "#" },
-    { title: "طباعة القرآن الكريم", href: "#" },
-    { title: "الدروس المرئية", href: "#" },
+    { title: " الخطوط الحاسوبية", href: "#" },
+    { title: "تقنيات القرآن الكريم", href: "#" },
+    { title: " المركز الأعلامي", href: "#" },
     { title: "تواصل معنا", href: "#" },
   ],
   committee: [
