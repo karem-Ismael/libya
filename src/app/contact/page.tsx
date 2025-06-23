@@ -9,9 +9,7 @@ import { useState } from "react";
 import axios from "axios";
 import Snackbar, { SnackbarCloseReason } from '@mui/material/Snackbar';
 import Alert from '@mui/material/Alert';
-interface State extends SnackbarOrigin {
-  open: boolean;
-}
+
 export default function Contact() {
   const [email,setEmail] = useState("")
   const[message,setMessage]=useState("")
@@ -19,7 +17,7 @@ export default function Contact() {
   const [open, setOpen] = useState(false);
 
  
-const handelSubmit=(e)=>{
+const handelSubmit=(e:any)=>{
   e.preventDefault()
   axios.post(`https://libya-awqaf-api.slsal.co/pgenquiries/contactus/createmail/ar?name=${name}&email=${email}&message=${message}`).then((res)=>{
     console.log(res,"contact res")

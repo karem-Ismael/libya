@@ -6,7 +6,7 @@ import Image from 'next/image';
 import axios from 'axios';
 interface ProductProps {
     id: number;
-    title: string;
+    title: any;
     brief: any;
     image_url: string;
   }
@@ -21,7 +21,7 @@ const ProductCard = ({ product }: { product: ProductProps }) => {
             alt={product.title?.["ar"]}
             className={styles.image1}
           
-          />
+          /> 
         </div>
         <div className={styles.content}>
           <h2 className={styles.productTitle}>{product.title}</h2>
