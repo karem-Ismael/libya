@@ -5,7 +5,8 @@ import styles from './page.module.css';
 import Header from '@/components/Header/Header';
 import Footer from '@/components/Footer/Footer';
 import { Container } from '@mui/material';
-
+import { useEffect,useState } from 'react';
+  import axios from "axios"
 const timelineItems = [
   {
     year: '1900 م',
@@ -30,6 +31,21 @@ const timelineItems = [
 ];
 
 export default function Quraan3() {
+  const [members,setMembers]=useState([])
+  const [timeline,setTimeLine]=useState([])
+  const[staticPages,setStaticPages]=useState([])
+ useEffect(()=>{
+  axios.get("https://libya-awqaf-api.slsal.co/pgarticles/committee_members/0/10").then((res)=>{
+    setMembers(res.data.data)
+  })
+  axios.get("https://libya-awqaf-api.slsal.co/pgarticles/timeline/0/10").then((res)=>{
+    setTimeLine(res?.data?.data)
+  })
+  axios.get("https://libya-awqaf-api.slsal.co/pgcontentpages/1000").then((res)=>{
+    setStaticPages(res.data.data)
+  })
+ },[]) 
+ console.log(timeline,"timeline")
   return (
     <>
       <Header />
@@ -43,14 +59,13 @@ export default function Quraan3() {
         <section className={styles.aboutSection}>
           <div className={styles.aboutContent}>
             <h2 className={styles.sectionTitle}>نبذة عن اللجنة</h2>
-            <p className={styles.aboutText}>
-              هي لجنة علمية مؤلفة من جملة من الخبراء والمختصين في مجال
-              حفظ القرآن الكريم ورسمه وضبطه وقراءاته وعلومه
-              وتختص بإعداد المصاحف ومراجعتها، وتتبع الآن تنظيمياً
-              وتتمتع بهيئة علمية مستقلة وتمارس نشاطها العلمي تحت
-              إشراف الهيئة العامة للأوقاف والشؤون الإسلامية. كما يشمل
-              برنامج عمل تنمية اللجنة في نطاق ميزانيتها السنوية وفق خطة
-              علمية محددة.
+            <p className={styles.aboutText} 
+            
+            dangerouslySetInnerHTML={{
+              __html:staticPages?.find(item=>item.id =="6bcb18c0-e271-4a35-be81-809794dd1c3c")?.content["ar"]
+            }}
+            >
+             
             </p>
           </div>
           <div className={styles.aboutImage}>
@@ -67,12 +82,12 @@ export default function Quraan3() {
         <section className={styles.timelineSection}>
           <h2 className={styles.timelineTitle}>المسار الزمني للتطور التنظيمي</h2>
           <div className={styles.timeline}>
-            {timelineItems.map((item, index) => (
+            {timeline.map((item, index) => (
               <div key={index} className={styles.timelineItem}>
                 <div className={styles.timelinePoint}></div>
-                <div className={styles.timelineYear}>{item.year}</div>
+                <div className={styles.timelineYear}>{item.brief["ar"]}</div>
                 <div className={styles.timelineContent}>
-                  <p>{item.description}</p>
+                  <p>{item.title["ar"]}</p>
                 </div>
               </div>
             ))}
@@ -82,20 +97,24 @@ export default function Quraan3() {
         <section className={styles.visionMissionSection}>
           <div className={styles.visionBox}>
             <h2 className={styles.boxTitle}>الرؤية</h2>
-            <p className={styles.boxText}>
-              مؤسسة قرآنية رائدة على مستوى العالم الإسلامي وحاضنة ومرجعية عن
-              المصحف، وتتبع مختلف الوسائل القرآنية الرقمية لتكون متاحة
-              للجميع وفق أعلى معايير
-              الدقة والكفاءة.
+            <p className={styles.boxText} 
+            
+            dangerouslySetInnerHTML={{
+              __html:staticPages.find(item=>item.id =="63d84e8b-229b-4a01-bcaa-1b51295e2b84")?.content["ar"]
+            }}
+            >
+              
             </p>
           </div>
           <div className={styles.missionBox}>
             <h2 className={styles.boxTitle}>الرسالة</h2>
-            <p className={styles.boxText}>
-              تسعى اللجنة في خدمة كتاب الله عز وجل من خلال إتقان المصاحف
-              وضبطها ومراجعتها والحرص على سلامة طباعتها وتوزيع مختلف
-              أنواعها وتقديمها بما يحسن تلقي كتاب الله في المسلمين في جميع
-              أنحاء المعمورة المختلفة.
+            <p className={styles.boxText} 
+            
+            dangerouslySetInnerHTML={{
+              __html: staticPages.find(item=>item.id =="22a40c2d-bc95-42c6-a140-836ca0d49062")?.content["ar"]
+            }}
+            >
+            
             </p>
           </div>
         </section>
@@ -142,7 +161,7 @@ export default function Quraan3() {
           <h2 className={styles.membersTitle}>أعضاء اللجنة</h2>
           
           <div className={styles.membersGrid}>
-            {[1, 2, 3, 4, 5].map((member) => (
+            {members.map((member) => (
               <div key={member} className={styles.memberCard}>
                 <div className={styles.memberImageContainer}>
                   <Image

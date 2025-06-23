@@ -1,0 +1,59 @@
+/*!*********************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[5].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[5].use[3]!./src/components/Header/page.module.css ***!
+  \*********************************************************************************************************************************************************************************************************************************************************************************/
+.page_header__ybFjW {
+ height: 100%;
+}
+/*!***************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[5].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[5].use[3]!./src/components/MediaCorner/media.module.css ***!
+  \***************************************************************************************************************************************************************************************************************************************************************************************/
+.media_div__QuZWA {
+    position: relative;
+    font-weight: 500;
+}
+.media_groupChild__QFP6l {
+    position: absolute;
+    top: 10px;
+    left: 0px;
+    border-radius: 20px;
+    background-color: #c8b56a;
+    width: 24px;
+    height: 4px;
+    opacity: 0.8;
+}
+.media_groupItem__nnxNy {
+    position: absolute;
+    top: 0px;
+    left: 14px;
+    border-radius: 20px;
+    background-color: #c8b56a;
+    width: 24px;
+    height: 4px;
+    transform:  rotate(90deg);
+    transform-origin: 0 0;
+    opacity: 0.8;
+}
+.media_rectangleParent__Udsj1 {
+    width: 24px;
+    position: relative;
+    height: 24px;
+}
+.media_login__Bl2sE {
+    width: 100%;
+    position: relative;
+    border-radius: 25px;
+    background-color: #8d733a;
+    height: 70px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 12px 48px;
+    box-sizing: border-box;
+    gap: 30px;
+    text-align: center;
+    font-size: 24px;
+    color: #fff;
+    font-family: 'IBM Plex Sans Arabic';
+}
+
+

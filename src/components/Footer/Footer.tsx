@@ -133,7 +133,7 @@ export default function Footer() {
             </Typography>
             <Box component="ul" sx={{ listStyle: "none", p: 0, m: 0 }}>
               {footerLinks.mainSection.map((link,index) => (
-                <Box component="li" key={link?.href || index } sx={{ mb: 1 }}>
+                <Box component="li" key={index } sx={{ mb: 1 }}>
                   <Link
                     href={link.href}
                     sx={{ 
@@ -159,8 +159,8 @@ export default function Footer() {
               اللجنة الدائمة
             </Typography>
             <Box component="ul" sx={{ listStyle: "none", p: 0, m: 0 }}>
-              {footerLinks.committee.map((link) => (
-                <Box component="li" key={link.href} sx={{ mb: 1 }}>
+              {footerLinks.committee.map((link,index) => (
+                <Box component="li" key={index} sx={{ mb: 1 }}>
                   <Link
                     href={link.href}
                     sx={{ 

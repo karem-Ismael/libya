@@ -5,8 +5,32 @@ import styles from "./page.module.css";
 import Image from "next/image";
 import Footer from "@/components/Footer/Footer";
 import { Container } from "@mui/material";
-
+import { useState } from "react";
+import axios from "axios";
+import Snackbar, { SnackbarCloseReason } from '@mui/material/Snackbar';
+import Alert from '@mui/material/Alert';
+interface State extends SnackbarOrigin {
+  open: boolean;
+}
 export default function Contact() {
+  const [email,setEmail] = useState("")
+  const[message,setMessage]=useState("")
+  const[name,setName]=useState("")
+  const [open, setOpen] = useState(false);
+
+ 
+const handelSubmit=(e)=>{
+  e.preventDefault()
+  axios.post(`https://libya-awqaf-api.slsal.co/pgenquiries/contactus/createmail/ar?name=${name}&email=${email}&message=${message}`).then((res)=>{
+    console.log(res,"contact res")
+    if(res.data.success){
+   setOpen(true)
+    }
+  })
+}
+const handleClose=()=>{
+  setOpen(false)
+}
   return (
 <>
 
@@ -33,13 +57,16 @@ export default function Contact() {
       <div className={styles.formSection}>
        
 
-        <form className={styles.form}>
+        <form onSubmit= {handelSubmit} className={styles.form}>
           <div className={styles.inputGroup}>
             <label className={styles.label}>الاسم</label>
             <input 
               type="text" 
               className={styles.input}
               placeholder="أدخل اسمك الكامل"
+              onChange={(e)=>{
+                setName(e.target.value)
+              }}
             />
           </div>
 
@@ -48,7 +75,9 @@ export default function Contact() {
             <input 
               type="email" 
               className={styles.input}
-              placeholder="example@domain.com"
+              onChange={(e)=>{
+                setEmail(e.target.value)
+              }}
             />
           </div>
 
@@ -66,6 +95,9 @@ export default function Contact() {
             <textarea 
               className={styles.textarea}
               placeholder="اكتب رسالتك هنا..."
+              onChange={(e)=>{
+                setMessage(e.target.value)
+              }}
             ></textarea>
           </div>
 
@@ -115,7 +147,16 @@ export default function Contact() {
       </div>
 
       </div>
-
+      <Snackbar open={open} autoHideDuration={6000} onClose={handleClose}>
+        <Alert
+          onClose={handleClose}
+          severity="success"
+          variant="filled"
+          sx={{ width: '100%' }}
+        >
+          تم الارسال بنجاح
+        </Alert>
+      </Snackbar>
       </Container>
     
       <Footer />

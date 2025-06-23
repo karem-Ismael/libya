@@ -2,6 +2,8 @@
 
 import Image from 'next/image';
 import styles from './page.module.css';
+import { useEffect,useState } from 'react';
+import axios from 'axios';
 const QuranItem = ({ item }) => {
   return (
     <div key={item} className={styles.quranItem}>
@@ -45,11 +47,17 @@ const SpecRow = ({ label, value }) => {
 };
 
 export  const QuranGrid1 = () => {
+  const [items,setItems]=useState([])
+useEffect(()=>{
+  axios.get("https://libya-awqaf-api.slsal.co/pgarticles/quran_committee/0/2").then((res)=>{
+    setItems(res.data.data)
+  })
+},[])
   return (
     <div className={styles.tabContent}>
       <div className={styles.tabDescription}>
         <div className={styles.quranGrid}>
-          {[1, 2].map((item) => (
+          {items.map((item) => (
             <QuranItem key={item} item={item} />
           ))}
         </div>

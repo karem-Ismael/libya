@@ -2,8 +2,9 @@
 
 import styles from './page.module.css';
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Image from 'next/image';
+import axios from 'axios';
 interface ProductProps {
   id: number;
   title: string;
@@ -64,24 +65,29 @@ const products = [
     image: '/quraan.png'
   }
 ];
-const ProductCard = ({ product }: { product: ProductProps }) => {
+const ProductCard = ({ item }: { item: any }) => {
   return (
-    <div key={product.id} className={styles.card}>
+    <div key={item.id} className={styles.card}>
       <div className={styles.imageContainer}>
         <Image
-          src="/quraan.png"
-          alt={product.title}
+          src={`https://libya-awqaf-api.slsal.co${item.image_url}`}
+          alt={"test"}
           className={styles.image1}
           width={500}
           height={500}
         />
       </div>
       <div className={styles.content}>
-        <h2 className={styles.productTitle}>{product.title}</h2>
+        <h2 className={styles.productTitle}>{item.title["ar"]}</h2>
         <div className={styles.specs}>
-          {product.specs.map((spec, index) => (
-            <p key={index}>{spec}</p>
-          ))}
+         <p >{item?.brief?.drawing["ar"]}</p>
+         <p >{item?.brief?.edition_number["ar"]}</p>
+         <p >{item?.brief?.narration["ar"]}</p>
+         <p >{item?.brief?.printed_sizes["ar"]}</p>
+         <p >{item?.brief?.printing_house["ar"]}</p>
+         <p >{item?.brief?.publish_year["ar"]}</p>
+
+
         </div>
         <button className={styles.downloadButton}>
           <Image 
@@ -98,11 +104,17 @@ const ProductCard = ({ product }: { product: ProductProps }) => {
 };
 
 const ProductGrid = () => {
+  const [items,setItems]=useState([])
+  useEffect(()=>{
+    axios.get("https://libya-awqaf-api.slsal.co/pgarticles/versions/0/10").then((res)=>{
+      setItems(res.data.data)
+    })
+  },[])
   return (
     <div className={styles.grid}>
-      {products.map((product) => (
-        <ProductCard key={product.id} product={product} />
-      ))}
+      {items?.length ? items.map((item,index) => (
+        <ProductCard key={index} item={item} />
+      )) : null}
     </div>
   );
 };

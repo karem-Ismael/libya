@@ -1,5 +1,16 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'libya-awqaf-api.slsal.co',
+        port: '',
+        pathname: '/**',
+        search: '',
+      },
+    ],
+  },
   transpilePackages: [
     "@mui/material",
     "@mui/system",

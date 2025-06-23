@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import styles from "./media.module.css";
 import {
   Box,
@@ -18,6 +18,7 @@ import {
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
 import Image from "next/image";
+import axios from "axios";
 
 const newsItems = [
   {
@@ -50,6 +51,24 @@ export default function MediaCorner() {
     setActiveTab(newValue);
   };
 const [activeMediaTab,setActiveMediaTab] = useState('images');
+const [news,setNews]=useState([])
+const [photos,setPhotos]=useState([])
+const [videos,setVideos]=useState([])
+const [questions,setQuesions]=useState([])
+useEffect(()=>{
+  axios.get("https://libya-awqaf-api.slsal.co/pgarticles/news_activities/0/10").then((res)=>{
+    setNews(res.data.data)
+  })
+  axios.get(`https://libya-awqaf-api.slsal.co/pgarticles/photo_library/0/10`).then((res)=>{
+    setPhotos(res.data.data)
+  })
+  axios.get("https://libya-awqaf-api.slsal.co/pgarticles/questions/0/10").then((res)=>{
+    setVideos(res.data.data)
+  })
+  axios.get(`https://libya-awqaf-api.slsal.co/pgarticles/questions/0/10`).then((res)=>{
+    setQuesions(res.data.data)
+  })
+},[])
   return (
     <Box sx={{ py: 8 }}>
       <Container maxWidth="xl">
@@ -102,7 +121,7 @@ const [activeMediaTab,setActiveMediaTab] = useState('images');
 
         {activeTab === 0 && (
           <Grid container spacing={4}>
-            {newsItems.map((item) => (
+            {news.map((item:any) => (
               <Grid item xs={12} md={4} key={item.id}>
                 <Card
                   sx={{
@@ -117,15 +136,15 @@ const [activeMediaTab,setActiveMediaTab] = useState('images');
                 >
                   <Box sx={{ position: "relative", height: 220 }}>
                     <Image
-                      src={item.image}
-                      alt={item.title}
+                      src={`https://libya-awqaf-api.slsal.co${item.image_url}`}
+                      alt={item.title["ar"]}
                       fill
                       style={{ objectFit: "cover" }}
                     />
                   </Box>
                   <CardContent sx={{ flexGrow: 1, textAlign: "right", p: 3 }}>
                     <Typography variant="caption" sx={{ color: "#999", display: "block", mb: 1 }}>
-                      {item.date}
+                      {item.publish_date}
                     </Typography>
                     <Typography
                       variant="h6"
@@ -143,7 +162,7 @@ const [activeMediaTab,setActiveMediaTab] = useState('images');
                         WebkitBoxOrient: "vertical",
                       }}
                     >
-                      {item.title}
+                      {item.title["ar"]}
                     </Typography>
                     <Typography
                       variant="body2"
@@ -156,8 +175,9 @@ const [activeMediaTab,setActiveMediaTab] = useState('images');
                         WebkitLineClamp: 3,
                         WebkitBoxOrient: "vertical",
                       }}
+                      
                     >
-                      {item.description}
+<div dangerouslySetInnerHTML={{ __html: item.brief["ar"] }} />
                     </Typography>
                     <Box sx={{ display: "flex", justifyContent: "flex-end" }}>
                       <Button
@@ -232,12 +252,12 @@ const [activeMediaTab,setActiveMediaTab] = useState('images');
 
   {activeMediaTab === 'images' && (
     <Grid container spacing={3}>
-      {[1, 2, 3, 4, 5, 6].map((item) => (
+      {photos.map((item:any) => (
         <Grid item xs={12} sm={6} md={4} key={item}>
           <Card sx={{ height: '100%', boxShadow: 'none',background:"none" }}>
             <Box sx={{ position: 'relative', height: 200 }}>
               <Image
-                src={`/media.png`}
+                src={ item.image_url ? `https://libya-awqaf-api.slsal.co${item.image_url}`: `/media.png`}
                 alt={`Gallery image ${item}`}
                 fill
                 style={{ objectFit: 'cover' }}
@@ -245,10 +265,14 @@ const [activeMediaTab,setActiveMediaTab] = useState('images');
             </Box>
             <CardContent sx={{ textAlign: 'right' }}>
             <Typography variant="h3" component="h3" sx={{ fontWeight: 600, mb: 2 }}>
-                صور مؤتمر الإمام نافع
+              {
+                item?.title["ar"]
+              }
                 </Typography>
               <Typography variant="body1" sx={{  display: 'block', mb: 1,color:"#BDAC89" }}>
-                15 Jan 2023
+                  {
+                    item?.publish_date
+                  }
               </Typography>
             
               
@@ -261,7 +285,7 @@ const [activeMediaTab,setActiveMediaTab] = useState('images');
 
   {activeMediaTab === 'videos' && (
     <Grid container spacing={3}>
-      {[1, 2, 3, 4].map((item) => (
+      {videos.map((item:any) => (
         <Grid item xs={12} sm={6} md={4} key={item}>
           <Card sx={{ height: '100%', boxShadow: 'none', background:"none" }}>
             <Box sx={{ position: 'relative', height: 200 }}>
@@ -301,10 +325,12 @@ const [activeMediaTab,setActiveMediaTab] = useState('images');
             </Box>
             <CardContent sx={{ textAlign: 'right' }}>
             <Typography variant="h3" component="h3" sx={{ fontWeight: 600, mb: 2 }}>
-                صور مؤتمر الإمام نافع
+            {item.title["ar"]}
                 </Typography>
               <Typography variant="body1" sx={{  display: 'block', mb: 1,color:"#BDAC89" }}>
-                15 Jan 2023
+                {
+                  item.publish_date
+                }
               </Typography>
             
               
@@ -319,14 +345,21 @@ const [activeMediaTab,setActiveMediaTab] = useState('images');
         )}
 
         {activeTab === 2 && (
-         <div className={styles.login}>
-             <div className={styles.rectangleParent}>
-         <div className={styles.groupChild} />
-         <div className={styles.groupItem} />
-         </div>
-         <div className={styles.div}>ما الخطوة الأولى للبدء في إنشاء موقعي الخاص؟</div>
-      
-         </div>
+          questions?.map((item:any)=> (
+            <div className={styles.login}>
+            <div className={styles.rectangleParent}>
+        <div className={styles.groupChild} />
+        <div className={styles.groupItem} />
+        </div>
+        <div className={styles.div}>
+          {
+            item.title["ar"]
+          }
+        </div>
+     
+        </div>
+          ))
+        
         )}
       </Container>
     </Box>
