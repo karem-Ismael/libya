@@ -43,6 +43,7 @@
 .committeeImage {
   border-radius: 8px;
   height: 100% ;
+  max-height: 360px;
   object-fit: cover;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
@@ -74,6 +75,7 @@
   left: 0;
   right: 147px;
   background-image: url("/LineIndicator.svg");
+  background-repeat: no-repeat;
   height: 12%;
   width: 100%;
   z-index: 1;
@@ -123,7 +125,6 @@
 .visionMissionSection {
   display: flex;
   gap: 2rem;
-  margin-bottom: 4rem;
   background: #F6F3ED;
 }
 
@@ -265,8 +266,11 @@
 }
 
 .previousMembersButton {
-  background-color: #b5a36a;
+  background: linear-gradient(180deg, #a08957, #8d733a);
+
   color: white;
+  font-size: 28px;
+  font-family: 'SST Arabic';
   border: none;
   padding: 0.75rem 2rem;
   border-radius: 4px;

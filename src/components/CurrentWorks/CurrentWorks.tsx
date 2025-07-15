@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import { Box, Container, Typography, Grid, Paper, Tabs, Tab } from "@mui/material";
+import { Box, Container, Typography, Grid, Paper, Tabs, Tab, Button } from "@mui/material";
 import Image from "next/image";
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import ProductGrid from "../firstTab";
@@ -108,9 +108,11 @@ export default function CurrentWorks() {
 
 
                   <Grid item xs={12} key={item.id}>
-                    <Box sx={{
+                    {
+                      index !=projects?.length -1 ? 
+                        <Box sx={{
                       position: 'relative',
-                      '&:not(:last-child)::after': {
+                      '&::after': {
                         content: '""',
                         position: 'absolute',
                         width:"60%",
@@ -168,7 +170,59 @@ export default function CurrentWorks() {
                         </Typography>
                       </Box>
                     </Box>
-                    <p></p>
+                    :
+                      <Box sx={{
+                      position: 'relative',
+                     
+                      display: 'flex',
+                      alignItems: 'flex-start',
+                      gap: 3,
+                      mb: 4
+                    }}>
+                      {/* Number circle */}
+                      <Box sx={{ 
+                        width: 40, 
+                        height: 40, 
+                        borderRadius: '50%', 
+                        backgroundColor: index ==0 ? "#A8905B" :'#f6f4ef',
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        color: index ==0 ? "#fff" :'#A8905B',
+                        fontWeight: 'bold',
+                        fontSize: '1.1rem',
+                        flexShrink: 0,
+                        mt: 0.5
+                      }}>
+                        {item.id}
+                      </Box>
+                      
+                      {/* Content */}
+                      <Box sx={{ flex: 1 }}>
+                        <Typography 
+                          variant="h6" 
+                          sx={{ 
+                            fontWeight: 600, 
+                            color: '#333', 
+                            fontSize: '1.2rem',
+                            mb: 1,
+                            textAlign: 'right'
+                          }}
+                        >
+                          {item.title}
+                        </Typography>
+                        <Typography sx={{ 
+                          color: '#666',
+                          fontSize: '0.95rem',
+                          lineHeight: 1.6,
+                          textAlign: 'right'
+                        }}>
+                          {item.description}
+                        </Typography>
+                      </Box>
+                    </Box>
+                    }
+                  
 
                   </Grid>
                 ))}
@@ -197,25 +251,19 @@ export default function CurrentWorks() {
                 />
               </Box>
               <Box sx={{textAlign:"left"}}>
-              <Box 
-                component="a" 
-                href="#" 
-                sx={{ 
-                  alignItems: 'center', 
-                  color: '#b5a36a',
-                  textDecoration: 'none',
-                  fontWeight: 500,
-                  fontSize: '0.9rem',
-                  marginTop: 3,
-                  justifyContent: 'flex-end',
+                <Button
+                sx={{
+                  color: '#B39B65',
+                  fontSize: '1rem',
+                  textTransform: 'none',
+                  padding:"0px",
                   '&:hover': {
-                    textDecoration: 'underline'
-                  }
+                    backgroundColor: 'transparent',
+                  },
                 }}
               >
-                المزيد
-                <ArrowBackIcon sx={{ ml: 0.5, fontSize: 16 }} />
-              </Box>
+                 المزيد ←
+              </Button>
               </Box>
             
             </Box>

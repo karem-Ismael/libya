@@ -163,7 +163,7 @@ export default function Hero() {
           }}
           onClick={handleBack}
         >
-          <ArrowRightAltIcon />
+          <img src="/tail-right.png"/>
         </IconButton>
         <IconButton
           sx={{
@@ -183,37 +183,13 @@ export default function Hero() {
           }}
           onClick={handleNext}
         >
-          <KeyboardBackspaceIcon />
+          {/* <KeyboardBackspaceIcon /> */}
+          <img src="/tail-left.png" />
         </IconButton>
       </Box>
 
       {/* Carousel Indicators */}
-      <Box
-        sx={{
-          position: "absolute",
-          bottom: 24,
-          width: "100%",
-          display: "flex",
-          justifyContent: "center",
-          gap: 1,
-          zIndex: 2,
-        }}
-      >
-        {carouselItems.map((_, index) => (
-          <Box
-            key={index}
-            sx={{
-              width: 32,
-              height: 4,
-              bgcolor:
-                index === activeStep ? "#A08957" : "rgba(255, 255, 255, 0.5)",
-              cursor: "pointer",
-              transition: "all 0.3s ease",
-            }}
-            onClick={() => handleStepChange(index)}
-          />
-        ))}
-      </Box>
+     
     </Box>
   );
 }

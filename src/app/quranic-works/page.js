@@ -29,13 +29,13 @@ export default function Home() {
 
     <Container maxWidth="xl" sx={{ height: '100%' }}>
       <main className={styles.container}>
-        <div className={styles.header}>
+        <div className={styles.mainTitle}>
           <h1 className={styles.title}>الأعمال القرآنية</h1>
-          <div className={styles.tabs}>
+          <div className={styles.tabsContainer}>
             {tabs.map((tab, index) => (
               <button
                 key={index}
-                className={`${styles.tab} ${activeTab === index ? styles.tabActive : ''}`}
+                className={`${styles.tabButton} ${activeTab === index ? styles.activeTab : ''}`}
                 onClick={() => setActiveTab(index)}
               >
                 {tab}

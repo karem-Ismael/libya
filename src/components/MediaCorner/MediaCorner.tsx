@@ -72,23 +72,37 @@ useEffect(()=>{
   return (
     <Box sx={{ py: 8 }}>
       <Container maxWidth="xl">
-        <Box sx={{ textAlign: "right", mb: 4 }}>
+        <Box sx={{ textAlign: "right", mb: 2 }}>
           <Typography
             variant="h2"
             component="h1"
             sx={{
               fontWeight: 700,
               color: "#333",
-              mb: 2,
             }}
           >
             المركز الإعلامي
           </Typography>
-          <Typography variant="subtitle1" sx={{ color: "#666" }}>
-            مؤسسة حكومية تُعنى بشؤون القرآن، والأوقاف، والمساجد، والشؤون الإسلامية.
-          </Typography>
+         
         </Box>
-
+<Box sx={{ 
+  display: 'flex',
+  alignItems: 'center',
+  justifyContent: 'space-between',
+  gap: 2,
+}}>
+  <Typography variant="subtitle1" sx={{ color: "#666" }}>
+    مؤسسة حكومية تُعنى بشؤون القرآن، والأوقاف، والمساجد، والشؤون الإسلامية.
+  </Typography>
+  {/* <ArrowBackIosNewIcon sx={{ color: '#b5a36a' }} /> */}
+  <Button
+  sx={{
+    background:"#A08957"
+  }}
+  >
+    <img src="/tail-left2.png" />
+  </Button>
+</Box>
         <Box sx={{ mb: 6 }}>
           <Tabs
             value={activeTab}

@@ -2,65 +2,72 @@
 
 import Image from 'next/image';
 import styles from './page.module.css';
-import { useEffect,useState } from 'react';
+import { useEffect, useState } from 'react';
 import axios from 'axios';
+import {
+  Button,
+} from "@mui/material";
 const QuranItem = ({ item }) => {
   return (
-    <div key={item} className={styles.quranItem}>
-      <div className={styles.quranImageContainer}>
-        <Image
-          src="/Cover.png"
-          alt="نموذج المصحف"
-          width={300}
-          height={200}
-          className={styles.quranImage}
-        />
+    <div className={styles.singleQuranContainer}>
+      
+      
+      {/* Quran Card */}
+      <div className={styles.quranCard}>
+        <div className={styles.quranImageContainer}>
+          <Image
+            src="/quran.png"
+            alt="المصحف الفاخر"
+            width={200}
+            height={280}
+            className={styles.quranBookImage}
+          />
+        </div>
+        <div className={styles.titleContainer} style={{ display: 'flex', alignItems: 'center', gap: '8px' ,justifyContent:"space-between",padding:"10px"}}>
+          <h3 className={styles.quranTitle}>المصحف الفاخر</h3>
+                      <Button
+                        sx={{ 
+                          color: "#b5a36a", 
+                          textTransform: "none",
+                          fontWeight: 500,
+                          fontSize:"20px",
+                          p: 0,
+                          '&:hover': {
+                            backgroundColor: 'transparent',
+                            textDecoration: 'underline',
+                          }
+                        }}
+                      >
+              ←
+                    
+                      </Button>
+        </div>
       </div>
-      <h3 className={styles.quranName}>اسم المصحف</h3>
-      <div className={styles.specTable}>
-        <SpecRow label="الرواية" value="حفص عن عاصم" />
-        <SpecRow label="التصميم" value="رواية" />
-        <SpecRow label="سنة النشر" value="جديد" />
-        <SpecRow label="دار الطباعة" value="رواية" />
-        <SpecRow label="رقم الطبعة" value="رواية" />
-        <SpecRow label="التجليد" value="رواية" />
-        <SpecRow label="الملاحظات" value="رواية" />
-        <SpecRow label="اسم المحقق" value="رواية" />
-        <SpecRow label="نوع المصحف" value="رواية" />
-        <SpecRow label="المحقق" value="رواية" />
-        <SpecRow label="محضر اجتماع اللجنة التي اعتمدت فيه القرار" value="رواية" />
-      </div>
+      
+      {/* Review Button */}
       <button className={styles.reviewButton}>
-        طلب مراجعة نسخة المصحف
+        طلب مراجعة نسخة مصحف
       </button>
     </div>
   );
 };
 
-const SpecRow = ({ label, value }) => {
+export const QuranGrid1 = () => {
+  const [items, setItems] = useState([]);
+  
+  useEffect(() => {
+    axios.get("https://libya-awqaf-api.slsal.co/pgarticles/quran_committee/0/2").then((res) => {
+      setItems(res.data.data);
+    });
+  }, []);
+  
   return (
-    <div className={styles.specRow}>
-      <div className={styles.specLabel}>{label}:</div>
-      <div className={styles.specValue}>{value}</div>
-    </div>
-  );
-};
-
-export  const QuranGrid1 = () => {
-  const [items,setItems]=useState([])
-useEffect(()=>{
-  axios.get("https://libya-awqaf-api.slsal.co/pgarticles/quran_committee/0/2").then((res)=>{
-    setItems(res.data.data)
-  })
-},[])
-  return (
-    <div className={styles.tabContent}>
-      <div className={styles.tabDescription}>
-        <div className={styles.quranGrid}>
-          {items.map((item) => (
-            <QuranItem key={item} item={item} />
-          ))}
-        </div>
+    <div className={styles.modernTabContent}>
+      <div className={styles.modernQuranGrid}>
+        {/* Display 3 items as shown in the design */}
+        {[1, 2, 3].map((index) => (
+          <QuranItem key={index} item={items[index] || {}} />
+        ))}
       </div>
     </div>
   );

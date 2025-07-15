@@ -65,6 +65,7 @@ export default function Actions() {
                   color: '#B39B65',
                   fontSize: '1rem',
                   textTransform: 'none',
+                  padding:"0px",
                   '&:hover': {
                     backgroundColor: 'transparent',
                   },
@@ -73,7 +74,9 @@ export default function Actions() {
                  المزيد ←
               </Button>
             </Box>
-            <Grid container spacing={2}>
+            <Grid container spacing={2} sx={{
+              marginTop:"20px"
+            }}>
               {actions.map((action, index) => (
                 <Grid item xs={12} sm={6} key={index}>
                   <Button

@@ -88,6 +88,13 @@ export default function Quraan3() {
                 <div className={styles.timelineYear}>{item.brief["ar"]}</div>
                 <div className={styles.timelineContent}>
                   <p>{item.title["ar"]}</p>
+<Image 
+  src="/pdficon.png"
+  alt="PDF Icon"
+  width={20}
+  height={20}
+  className={styles.pdfIcon}
+/>
                 </div>
               </div>
             ))}
@@ -121,7 +128,7 @@ export default function Quraan3() {
 
         <section className={styles.imagesSection}>
           <Image
-            src="/libya.png"
+            src="/libya1.png"
             alt="أعضاء اللجنة"
             width={800}
             height={400}
@@ -180,7 +187,7 @@ export default function Quraan3() {
           
           <div className={styles.previousMembersContainer}>
             <button className={styles.previousMembersButton}>
-              أعضاء سابقين
+              الأعضاء  السابقين
             </button>
           </div>
         </section>

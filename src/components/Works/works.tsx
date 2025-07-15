@@ -16,9 +16,11 @@ import {
 } from "@mui/material";
 import SearchIcon from "@mui/icons-material/Search";
 import CalendarTodayIcon from "@mui/icons-material/CalendarToday";
+import Image from "next/image";
 import styles from "./works.module.css";
 import BlindComponent from "../blind/blind";
 import ProductGrid from "../firstTab";
+import Reasearches from "../Researches";
 
 const quranItems = [
   {
@@ -114,7 +116,7 @@ const quranItems = [
 ];
 
 export default function Works() {
-  const [activeTab, setActiveTab] = useState(4);
+  const [activeTab, setActiveTab] = useState(0);
   const [page, setPage] = useState(1);
   const itemsPerPage = 15;
 
@@ -209,16 +211,94 @@ export default function Works() {
             borderColor: 'divider',
           }}
         >
-          <Tab label="  البرامج و التطبيقات" className={styles.tab} />
-          <Tab label="  الخطوط الحاسوبة" className={styles.tab} />
+          <Tab label="البرامج و التطبيقات" className={styles.tab} />
+          <Tab label="الخطوط الحاسوبة" className={styles.tab} />
           <Tab label="مصحف المكفوفين بلغة (برايل)" className={styles.tab} />
           <Tab label="مصحف الأوقاف لأعمال الطباعة" className={styles.tab} />
           <Tab label="الدراسات والأبحاث والمقالات" className={activeTab === 4 ? styles.activeTab : styles.tab} />
         </Tabs>
       </Box>
 
-     {
-        activeTab == 1  ?(
+      {activeTab === 0 ? (
+        // App Design Section - Updated to match the design
+        <Box className={styles.appShowcaseContainer}>
+          {/* First App Showcase */}
+          <Box className={styles.appShowcase}>
+            <Grid container spacing={4} alignItems="center">
+              {/* Left side - Phone mockup */}
+                <Grid item xs={12} md={6}>
+                <Box className={styles.appInfo}>
+                  {/* App Logo for mobile */}
+                  <Box className={styles.mobileAppLogo}>
+                    <Image
+                      src="/app.png"
+                      alt="شعار التطبيق"
+                      width={200}
+                      height={200}
+                    />
+                  </Box>
+
+                  <Typography className={styles.appTitle}>
+                    تطبيق: مصحف الأوقاف الليبية
+                  </Typography>
+                  
+                  <Typography className={styles.appSubtitle}>
+                    (برواية قالون) الإصدار الثاني
+                  </Typography>
+
+                  <Typography className={styles.appDescription}>
+                    هو النسخة الإلكترونية الرسمية المعتمدة من هيئة
+                    العامة للأوقاف والشؤون الإسلامية لمصحف الأوقاف
+                    الليبية، برواية قالون عن نافع، ورسم الإمام الداني، والذي
+                    خضعت لجميع الضوابط الدقيقة.
+                  </Typography>
+
+                  {/* Download Buttons */}
+                  <Box className={styles.downloadButtonsContainer}>
+                    <Button className={styles.downloadButton}>
+                      <Image
+                        src="/App_Store.png"
+                        alt="تحميل من App Store"
+                        width={140}
+                        height={42}
+                      />
+                    </Button>
+                    <Button className={styles.downloadButton}>
+                      <Image
+                        src="/play.png"
+                        alt="تحميل من Google Play"
+                        width={140}
+                        height={42}
+                      />
+                    </Button>
+                  </Box>
+                </Box>
+              </Grid>
+              <Grid item xs={12} md={6}>
+                <Box className={styles.phoneContainer}>
+                  <Box className={styles.phoneFrame}>
+                    <Image
+                      src="/app2.png"
+                      alt="تطبيق مصحف الأوقاف الليبية"
+                      width={300}
+                      height={600}
+                      className={styles.phoneImage}
+                    />
+                  </Box>
+                  {/* App Logo positioned on the phone */}
+                 
+                </Box>
+              </Grid>
+
+              {/* Right side - App description and download buttons */}
+            
+            </Grid>
+          </Box>
+
+          {/* Second App Showcase */}
+       
+        </Box>
+      ) : activeTab === 1 ? (
          <>
             <Grid container spacing={3} className={styles.gridContainer}>
             {quranItems.map((item) => (
@@ -352,11 +432,14 @@ export default function Works() {
             />
           </Box>
          </>
-        ) : activeTab == 2 ? (
+        ) : activeTab === 2 ? (
           <BlindComponent />
-        ) : activeTab == 3? (
+        ) : activeTab === 3? (
           <ProductGrid   
           />
+        )
+        : activeTab ==4 ?(
+          <Reasearches />
         )
         : null
      }

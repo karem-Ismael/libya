@@ -5,6 +5,7 @@ import styles from './page.module.css';
 import { useEffect, useState } from 'react';
 import Image from 'next/image';
 import axios from 'axios';
+import { Button } from '@mui/material';
 interface ProductProps {
   id: number;
   title: string;
@@ -67,38 +68,51 @@ const products = [
 ];
 const ProductCard = ({ item }: { item: any }) => {
   return (
-    <div key={item.id} className={styles.card}>
-      <div className={styles.imageContainer}>
-        <Image
-          src={`https://libya-awqaf-api.slsal.co${item.image_url}`}
-          alt={"test"}
-          className={styles.image1}
-          width={500}
-          height={500}
-        />
-      </div>
-      <div className={styles.content}>
-        <h2 className={styles.productTitle}>{item.title["ar"]}</h2>
-        <div className={styles.specs}>
-         <p >{item?.brief?.drawing["ar"]}</p>
-         <p >{item?.brief?.edition_number["ar"]}</p>
-         <p >{item?.brief?.narration["ar"]}</p>
-         <p >{item?.brief?.printed_sizes["ar"]}</p>
-         <p >{item?.brief?.printing_house["ar"]}</p>
-         <p >{item?.brief?.publish_year["ar"]}</p>
-
-
-        </div>
-        <button className={styles.downloadButton}>
-          <Image 
-            src="/pdficon.png" 
-            alt="PDF" 
-            width={20} 
-            height={20} 
+    <div className={styles.singleProductContainer}>
+      {/* Back Arrow */}
+     
+      
+      {/* Product Card */}
+      <div className={styles.productCard}>
+        <div className={styles.productImageContainer}>
+          <Image
+            src={`https://libya-awqaf-api.slsal.co${item.image_url}`}
+            alt={item.title["ar"]}
+            width={400}
+            height={300}
+            className={styles.productImage}
           />
-          <span>تحميل المصحف</span>   
-        </button>
+        </div>
+         <div className={styles.titleContainer} style={{ display: 'flex', alignItems: 'center', gap: '8px' ,justifyContent:"space-between",padding:"10px"}}>
+          <h3 className={styles.quranTitle}>{item.title["ar"]}</h3>
+                      <Button
+                        sx={{ 
+                          color: "#b5a36a", 
+                          textTransform: "none",
+                          fontWeight: 500,
+                          fontSize:"20px",
+                          p: 0,
+                          '&:hover': {
+                            backgroundColor: 'transparent',
+                            textDecoration: 'underline',
+                          }
+                        }}
+                      >
+              ←
+                    
+                      </Button>
+        </div>
+       
       </div>
+      
+      {/* Download Button */}
+      <button className={styles.downloadProductButton}>
+         <div className={styles.pdfIcon}>
+          <img src="pdficon.png" />
+        </div>
+        <span>تحميل للمصحف</span>
+       
+      </button>
     </div>
   );
 };

@@ -44,9 +44,10 @@
   
   .grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    row-gap: 20px;
     gap: 2rem;
-    margin: 0 auto;
+    margin: 20px auto;
   }
   
   .card {
@@ -260,4 +261,97 @@
   
   .reviewButton:hover {
     background-color: #a3915c;
+  }
+  
+  .singleProductContainer {
+    direction: rtl;
+  }
+  
+  .backArrow {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    cursor: pointer;
+  }
+  
+  .productCard {
+    background: white;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+    margin-bottom: 1.5rem;
+    border: 1px solid #f0f0f0;
+  }
+  
+  .productImageContainer {
+    display: flex;
+    border-radius: 8px;
+  }
+  
+  .productImage {
+    width: 100%;
+    height: 100%;
+    max-height: 323px;
+    object-fit: fill;
+  }
+  
+  .productCardTitle {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #2c2c2c;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+  }
+  
+  .downloadProductButton {
+    width: 100%;
+    background-color: #99814d;
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: center;
+    border-radius: 8px;
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    gap:5px;
+    align-items: center;
+    direction: rtl;
+    width: 50%;
+    margin: auto;
+  }
+  
+  .downloadProductButton:hover {
+    background-color: #99814d;
+  }
+  
+  .pdfIcon {
+    color: white;
+    font-size: 0.8rem;
+    font-weight: bold;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .singleProductContainer {
+      padding: 1rem;
+    }
+    
+    .productCard {
+      padding: 1.5rem;
+    }
+    
+    .productImageContainer {
+      min-height: 250px;
+      padding: 1.5rem;
+    }
+    
+    .downloadProductButton {
+      flex-direction: column;
+      gap: 0.5rem;
+    }
   }

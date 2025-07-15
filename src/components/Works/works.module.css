@@ -186,3 +186,342 @@
     flex-direction: column;
   }
 }
+
+/* App Section Styles */
+.appSection {
+  padding: 4rem 2rem;
+  background: linear-gradient(135deg, #b5a36a 0%, #8b7355 100%);
+  border-radius: 20px;
+  margin-top: 2rem;
+  direction: rtl;
+}
+
+.phoneMockupsContainer {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.phoneWrapper {
+  position: relative;
+  filter: drop-shadow(0 10px 30px rgba(0, 0, 0, 0.3));
+}
+
+.phoneImage {
+  border-radius: 25px;
+  object-fit: contain;
+}
+
+.appLogo {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: white;
+  border-radius: 50%;
+  padding: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.mobileAppLogo {
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.appContent {
+  color: white;
+  text-align: right;
+  padding: 2rem;
+}
+
+.appTitle {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  font-family: 'SST Arabic', Arial, sans-serif;
+}
+
+.appSubtitle {
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-bottom: 2rem;
+  opacity: 0.9;
+  font-family: 'SST Arabic', Arial, sans-serif;
+}
+
+.appDescription {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 3rem;
+  opacity: 0.95;
+  font-family: 'SST Arabic', Arial, sans-serif;
+}
+
+.downloadButtons {
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-end;
+}
+
+.appStoreButton,
+.playStoreButton {
+  background: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.appStoreButton:hover,
+.playStoreButton:hover {
+  transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .appSection {
+    padding: 2rem 1rem;
+  }
+  
+  .phoneMockupsContainer {
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+  }
+  
+  .phoneWrapper {
+    transform: scale(0.8);
+  }
+  
+  .appLogo {
+    display: none;
+  }
+  
+  .mobileAppLogo {
+    display: flex;
+  }
+  
+  .appContent {
+    text-align: center;
+    padding: 1rem;
+  }
+  
+  .appTitle {
+    font-size: 2rem;
+  }
+  
+  .appSubtitle {
+    font-size: 1.2rem;
+  }
+  
+  .downloadButtons {
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* App Showcase Styles */
+.appShowcaseContainer {
+  display: flex;
+  color: red;
+  flex-direction: column;
+  gap: 4rem;
+  margin-top: 2rem;
+}
+
+.appShowcase {
+  color: red;
+  border-radius: 25px;
+  padding: 3rem 2rem;
+  direction: rtl;
+  position: relative;
+  overflow: hidden;
+}
+
+.phoneContainer {
+  padding: 2rem;
+}
+
+.phoneFrame {
+  position: relative;
+  filter: drop-shadow(0 15px 35px rgba(0, 0, 0, 0.3));
+}
+
+.multiPhoneFrame {
+  position: relative;
+  display: flex;
+  gap: -2rem;
+  filter: drop-shadow(0 15px 35px rgba(0, 0, 0, 0.3));
+}
+
+.phoneImage {
+  border-radius: 25px;
+  width: 100%;
+  object-fit: contain;
+  max-width: 100%;
+  height: auto;
+}
+
+.phoneImageSecond {
+  border-radius: 25px;
+  object-fit: contain;
+  max-width: 100%;
+  height: auto;
+  margin-left: -50px;
+  z-index: 1;
+}
+
+.appLogoOverlay {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 50%;
+  padding: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(10px);
+}
+
+.appLogoImage {
+  border-radius: 50%;
+}
+
+.mobileAppLogo {
+  justify-content: center;
+  margin-bottom: .5rem;
+}
+
+.appInfo {
+  text-align: right;
+  gap: 17px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+}
+
+.appTitle {
+  font-size: 2.2rem;
+  font-weight: bold !important;
+  color:#231F20;
+  font-family: 'SST Arabic';
+}
+
+.appSubtitle {
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  color: #231F20;
+  opacity: 0.95;
+  font-family: 'SST Arabic';
+}
+
+.appDescription {
+  font-size: 1rem;
+  line-height: 1.8;
+  margin-bottom: 2.5rem;
+  opacity: 0.95;
+  font-family: 'SST Arabic', Arial;
+  color:#6e6c6c ;
+  max-width: 90%;
+}
+
+.downloadButtonsContainer {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.downloadButton {
+
+  background: transparent;
+  border: none;
+  padding: 0 !important;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.downloadButton:hover {
+  transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .appShowcaseContainer {
+    gap: 2rem;
+  }
+  
+  .appShowcase {
+    padding: 2rem 1rem;
+    border-radius: 20px;
+  }
+  
+ 
+  
+  .phoneFrame,
+  .multiPhoneFrame {
+    transform: scale(0.8);
+  }
+  
+  .multiPhoneFrame {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .phoneImageSecond {
+    margin-left: 0;
+  }
+  
+  .appLogoOverlay {
+    display: none;
+  }
+  
+  .mobileAppLogo {
+    display: flex;
+  }
+  
+  .appInfo {
+    text-align: center;
+  }
+  
+  .appTitle {
+    font-size: 1.8rem;
+  }
+  
+  .appSubtitle {
+    font-size: 1.1rem;
+  }
+  
+  .appDescription {
+    font-size: 0.9rem;
+    max-width: 100%;
+  }
+  
+  .downloadButtonsContainer {
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .appTitle {
+    font-size: 1.5rem;
+  }
+  
+  .appSubtitle {
+    font-size: 1rem;
+  }
+  
+  .downloadButton img {
+    width: 120px;
+    height: auto;
+  }
+}
