@@ -49,7 +49,7 @@ export default function TopBar() {
           م
         </Typography>
         <Button
-          startIcon={<LanguageIcon />}
+          startIcon={<LanguageIcon style={{marginLeft:"5px"}}/>}
           sx={{
             color: "common.white",
             textTransform: "none",
@@ -58,6 +58,7 @@ export default function TopBar() {
             fontWeight: 400,
           }}
         >
+          {"   "}
           اللغة العربية
         </Button>
       </Container>

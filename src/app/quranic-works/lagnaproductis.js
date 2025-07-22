@@ -23,7 +23,7 @@ const QuranItem = ({ item }) => {
             className={styles.quranBookImage}
           />
         </div>
-        <div className={styles.titleContainer} style={{ display: 'flex', alignItems: 'center', gap: '8px' ,justifyContent:"space-between",padding:"10px"}}>
+        <div className={styles.titleContainer} style={{ display: 'flex', alignItems: 'center', gap: '8px' ,justifyContent:"space-between",padding:"10px 20px"}}>
           <h3 className={styles.quranTitle}>المصحف الفاخر</h3>
                       <Button
                         sx={{ 

@@ -14,10 +14,12 @@
   font-style: normal;
   font-display: swap;
 }
-
+*{
+  font-family: 'SST Arabic';
+}
 /* Then apply it to the body and all elements */
 body {
-  font-family: 'SST Arabic', Arial, sans-serif;
+  font-family: 'SST Arabic';
   margin: 0px !important;
 }
 

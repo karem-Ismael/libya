@@ -12,23 +12,11 @@
       "static/css/app/page.css",
       "static/chunks/app/page.js"
     ],
-    "/quranic-works/page": [
+    "/quranic-works/[id]/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/css/app/quranic-works/page.css",
-      "static/chunks/app/quranic-works/page.js"
-    ],
-    "/Media/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/css/app/Media/page.css",
-      "static/chunks/app/Media/page.js"
-    ],
-    "/standards-policies/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/css/app/standards-policies/page.css",
-      "static/chunks/app/standards-policies/page.js"
+      "static/css/app/quranic-works/[id]/page.css",
+      "static/chunks/app/quranic-works/[id]/page.js"
     ],
     "/permanent-committee/page": [
       "static/chunks/webpack.js",

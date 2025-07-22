@@ -149,6 +149,7 @@ export default function Hero() {
           sx={{
             width: 40,
             height: 40,
+            padding:"0px 25px",
             color: "#A08957",
             "&:hover": {
               bgcolor: "transparent",

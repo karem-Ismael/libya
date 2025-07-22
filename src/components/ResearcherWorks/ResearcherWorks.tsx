@@ -57,7 +57,7 @@ export default function ResearcherWorks() {
 
             <Button 
               variant="text" 
-              endIcon={<ArrowBackIcon />}
+              endIcon={<ArrowBackIcon style={{marginRight:"5px"}} />}
               sx={{ 
                 color: '#b5a36a', 
                 fontWeight: 500,

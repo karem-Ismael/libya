@@ -6,10 +6,10 @@ import Image from "next/image";
 
 export default function Actions() {
   const actions = [
-    { title: "نبذة عن اللجنة", href: "#" },
-    { title: "مهام اللجنة", href: "#" },
-    { title: "الرؤية والرسالة", href: "#" },
-    { title: "أعضاء اللجنة", href: "#" },
+    { title: "نبذة عن اللجنة", href: "/permanent-committee" },
+    { title: "مهام اللجنة", href: "/permanent-committee" },
+    { title: "الرؤية والرسالة", href: "/permanent-committee" },
+    { title: "أعضاء اللجنة", href: "/permanent-committee" },
   ];
 
   return (

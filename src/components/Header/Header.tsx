@@ -51,10 +51,10 @@ const navItems = [
     title: "الأعمال القرآنية", 
     href: "/quranic-works",
     dropdown: [
-      { title:  'إصدارات مصحف الأوقاف الليبية', href: "/quranic-works/printed-quran" },
-      { title:  'المصاحف المعروضة على اللجنة', href: "/quranic-works/digital-apps" },
-      { title:'الأعمال التقنية', href: "/quranic-works/translations" },
-      { title:  'الدراسات والأبحاث والمقالات', href: "/quranic-works/interpretations" },
+      { title:  'إصدارات مصحف الأوقاف الليبية', href: "/quranic-works/0" },
+      { title:  'المصاحف المعروضة على اللجنة', href: "/quranic-works/1" },
+      { title:'الأعمال التقنية', href: "/quranic-works/2" },
+      { title:  'الدراسات والأبحاث والمقالات', href: "/quranic-works/3" },
     ]
   },
   { title: "مبيعات المصاحف", href: "/quran-sales" },

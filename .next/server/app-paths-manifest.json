@@ -1,7 +1,5 @@
 {
+  "/quranic-works/[id]/page": "app/quranic-works/[id]/page.js",
   "/page": "app/page.js",
-  "/quranic-works/page": "app/quranic-works/page.js",
-  "/Media/page": "app/Media/page.js",
-  "/standards-policies/page": "app/standards-policies/page.js",
   "/permanent-committee/page": "app/permanent-committee/page.js"
 }
