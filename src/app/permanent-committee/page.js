@@ -62,8 +62,9 @@ export default function Quraan3() {
             <h2 className={styles.sectionTitle}>نبذة عن اللجنة</h2>
             <p className={styles.aboutText} >
              {
+              staticPages?.find(item=>item.id =="6bcb18c0-e271-4a35-be81-809794dd1c3c")?.content["ar"] ? 
               stripHtml(staticPages?.find(item=>item.id =="6bcb18c0-e271-4a35-be81-809794dd1c3c")?.content["ar"])
-
+              : null
              }
             </p>
           </div>
@@ -108,8 +109,9 @@ export default function Quraan3() {
            
             >
               {
+                staticPages.find(item=>item.id =="63d84e8b-229b-4a01-bcaa-1b51295e2b84")?.content["ar"] ? 
               stripHtml(staticPages.find(item=>item.id =="63d84e8b-229b-4a01-bcaa-1b51295e2b84")?.content["ar"])
-
+                : null
               }
             </p>
           </div>
@@ -120,8 +122,9 @@ export default function Quraan3() {
          
             >
             {
+              staticPages.find(item=>item.id =="22a40c2d-bc95-42c6-a140-836ca0d49062")?.content["ar"] ?
                             stripHtml(staticPages.find(item=>item.id =="22a40c2d-bc95-42c6-a140-836ca0d49062")?.content["ar"])
-
+              : null
             }
             </p>
           </div>
