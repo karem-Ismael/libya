@@ -13,8 +13,12 @@
   display: flex;
   gap: 2rem;
   margin-bottom: 4rem;
+  align-items: center;
 }
-
+.tasksIntro{
+  font-size: 30px;
+  text-align: justify;
+}
 .aboutContent {
   flex: 1;
 }

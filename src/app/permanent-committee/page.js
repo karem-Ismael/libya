@@ -7,6 +7,7 @@ import Footer from '@/components/Footer/Footer';
 import { Container } from '@mui/material';
 import { useEffect,useState } from 'react';
   import axios from "axios"
+import stripHtml from '@/components/Strip';
 const timelineItems = [
   {
     year: '1900 م',
@@ -59,13 +60,11 @@ export default function Quraan3() {
         <section className={styles.aboutSection}>
           <div className={styles.aboutContent}>
             <h2 className={styles.sectionTitle}>نبذة عن اللجنة</h2>
-            <p className={styles.aboutText} 
-            
-            dangerouslySetInnerHTML={{
-              __html:staticPages?.find(item=>item.id =="6bcb18c0-e271-4a35-be81-809794dd1c3c")?.content["ar"]
-            }}
-            >
-             
+            <p className={styles.aboutText} >
+             {
+              stripHtml(staticPages?.find(item=>item.id =="6bcb18c0-e271-4a35-be81-809794dd1c3c")?.content["ar"])
+
+             }
             </p>
           </div>
           <div className={styles.aboutImage}>
@@ -106,22 +105,24 @@ export default function Quraan3() {
             <h2 className={styles.boxTitle}>الرؤية</h2>
             <p className={styles.boxText} 
             
-            dangerouslySetInnerHTML={{
-              __html:staticPages.find(item=>item.id =="63d84e8b-229b-4a01-bcaa-1b51295e2b84")?.content["ar"]
-            }}
+           
             >
-              
+              {
+              stripHtml(staticPages.find(item=>item.id =="63d84e8b-229b-4a01-bcaa-1b51295e2b84")?.content["ar"])
+
+              }
             </p>
           </div>
           <div className={styles.missionBox}>
             <h2 className={styles.boxTitle}>الرسالة</h2>
             <p className={styles.boxText} 
             
-            dangerouslySetInnerHTML={{
-              __html: staticPages.find(item=>item.id =="22a40c2d-bc95-42c6-a140-836ca0d49062")?.content["ar"]
-            }}
+         
             >
-            
+            {
+                            stripHtml(staticPages.find(item=>item.id =="22a40c2d-bc95-42c6-a140-836ca0d49062")?.content["ar"])
+
+            }
             </p>
           </div>
         </section>

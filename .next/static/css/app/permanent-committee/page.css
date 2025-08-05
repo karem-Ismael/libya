@@ -16,8 +16,12 @@
   display: flex;
   gap: 2rem;
   margin-bottom: 4rem;
+  align-items: center;
 }
-
+.page_tasksIntro__sk04B{
+  font-size: 30px;
+  text-align: justify;
+}
 .page_aboutContent__CYzZ6 {
   flex: 1 1;
 }

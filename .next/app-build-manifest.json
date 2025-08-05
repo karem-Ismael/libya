@@ -12,17 +12,16 @@
       "static/css/app/page.css",
       "static/chunks/app/page.js"
     ],
-    "/quranic-works/[id]/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/css/app/quranic-works/[id]/page.css",
-      "static/chunks/app/quranic-works/[id]/page.js"
-    ],
     "/permanent-committee/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/css/app/permanent-committee/page.css",
       "static/chunks/app/permanent-committee/page.js"
+    ],
+    "/_not-found/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/_not-found/page.js"
     ]
   }
 }
